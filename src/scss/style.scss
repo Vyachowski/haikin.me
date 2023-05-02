@@ -1,13 +1,25 @@
+// VARIABLES
+
+// Colors
+$background-color: #ffffff;
+$dark-background-color: #ffffff;
+$text-color: #637381;
+$text-size: 16px;
+
+// Text
+$tablet-text-size: calc($text-size + 2px);
+$laptop-text-size: calc($tablet-text-size + 2px);
+$desktop-text-size: calc($laptop-text-size + 2px);
+$basic-font: "Inter", Arial, system-ui, sans-serif;
+
+// Fonts
 @font-face {
   font-family: "Inter";
   src: url("../assets/fonts/Inter-VariableFont.ttf") format("truetype");
   font-display: swap;
 }
 
-:root[data-theme='light'] {
-  $background-color: #ffffff;
-  $text-color: #637381;
-}
+// SERVICE STYLES
 
 .visually-hidden {
   position: absolute;
@@ -23,6 +35,13 @@
   overflow: hidden;
 }
 
-body {
-  font-family: "Inter", Arial, sans-serif;
+// BASIC STYLES
+
+:root {
+  font-size: $text-size;
+  font-family: $basic-font;
+}
+
+:root[data-theme='light'] {
+  background-color: $background-color;
 }
