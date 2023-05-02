@@ -1,0 +1,32 @@
+{
+  "name": "vyachowski-site",
+  "version": "1.0.0",
+  "description": "Frontend developer website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "live-server --watch=\"dist/*.css,dist/*.html\" --mount=/:dist",
+    "build:scss-to-css": "node-sass src/scss -o dist/css",
+    "build:pug-to-html": "pug src -o dist --pretty",
+    "build:post-css": "postcss --no-map --use autoprefixer cssnano -d dist/css --ext .min.css dist/css/*.css",
+    "build": "del-cli dist/* && npm run build:scss-to-css && npm run build:post-css && npm run build:pug-to-html",
+    "watch:scss-to-css": "node-sass --watch src -o dist/styles",
+    "watch:pug-to-html": "pug src -o dist --watch",
+    "copy": "cpx 'src/**/*.{html,png,jpg,svg}' dist --watch",
+    "watch": "npm run build && concurrently \"npm run serve\" \"npm run watch:scss-to-css\" \"npm run watch:pug-to-html\" \"npm run copy\"",
+    "prepublish": "npm run build"
+  },
+  "author": "Slava Haikin",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "concurrently": "^8.0.1",
+    "cpx": "^1.5.0",
+    "cssnano": "^6.0.1",
+    "del-cli": "^5.0.0",
+    "live-server": "^1.2.2",
+    "node-sass": "^8.0.0",
+    "postcss-cli": "^10.1.0",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}

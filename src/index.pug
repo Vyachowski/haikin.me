@@ -1,0 +1,29 @@
+doctype html
+html(lang="en" data-theme='light')
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="css/style.css")
+    title Slava Haikin - Fullstack developer
+  body.page
+    header.page__header
+      a.logo(href="#")
+          img.logo__image(src="assets/images/logo.svg", alt="Logotype 'Vyachowski'")
+      nav.navigation
+        ul.navigation__list 
+          li.navigation__item 
+            a.navigation__link(href="#") Resume / CV
+          li.navigation__item.visually-hidden
+            a.navigation__link(href="#") Blog
+          li.navigation__item.visually-hidden
+            a.navigation__link(href="#") Skills
+        ul.socials__list
+          li.socials__item 
+            a.socials__link(href="https://github.com/vyachowski") 
+            a.socials__link(href="https://www.linkedin.com/in/vyachowski/") 
+    main.page__content 
+      section.hero 
+        p.
+          I am just a plain text with connected font
+    footer.page__footer
