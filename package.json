@@ -12,7 +12,7 @@
     "build": "del-cli dist/* && npm run build:scss-to-css && npm run build:post-css && npm run build:pug-to-html",
     "watch:scss-to-css": "node-sass --watch src/scss -o dist/css",
     "watch:pug-to-html": "pug src -o dist --watch",
-    "copy": "cpx 'src/**/*.{html,png,jpg,svg}' dist --watch",
+    "copy": "cpx 'src/**/*.{html,png,jpg,svg,ttf,woff,woff2}' dist --watch",
     "watch": "npm run build && concurrently \"npm run serve\" \"npm run watch:scss-to-css\" \"npm run watch:pug-to-html\" \"npm run copy\"",
     "prepublish": "npm run build"
   },

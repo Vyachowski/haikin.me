@@ -10,15 +10,18 @@ html(lang="en" data-theme='light')
     header.page__header
       a.logo(href="#")
           img.logo__image(src="assets/images/logo.svg", alt="Logotype 'Vyachowski'")
-      button.toogle-menu.no-js
-      nav.navigation
-        ul.navigation__list 
-          li.navigation__item 
-            a.navigation__link(href="#") Resume / CV
-          li.navigation__item.visually-hidden
-            a.navigation__link(href="#") Blog
-          li.navigation__item.visually-hidden
-            a.navigation__link(href="#") Skills
+      button.navbar-toggler.no-js
+        span
+        span 
+        span
+      nav.navbar
+        ul.navbar__list 
+          li.navbar__item 
+            a.navbar__link(href="#") Resume / CV
+          li.navbar__item.visually-hidden
+            a.navbar__link(href="#") Blog
+          li.navbar__item.visually-hidden
+            a.navbar__link(href="#") Skills
         ul.socials__list
           li.socials__item 
             a.socials__link(href="https://github.com/vyachowski") 

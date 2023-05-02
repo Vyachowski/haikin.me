@@ -4,9 +4,10 @@
 $background-color: #ffffff;
 $dark-background-color: #ffffff;
 $text-color: #637381;
-$text-size: 16px;
 
 // Text
+$text-size: 16px;
+$line-height: 1.5rem;
 $tablet-text-size: calc($text-size + 2px);
 $laptop-text-size: calc($tablet-text-size + 2px);
 $desktop-text-size: calc($laptop-text-size + 2px);
@@ -45,3 +46,80 @@ $basic-font: "Inter", Arial, system-ui, sans-serif;
 :root[data-theme='light'] {
   background-color: $background-color;
 }
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  object-fit: contain;
+}
+
+// HEADER
+
+.page__header {
+  display: flex;
+}
+
+.navbar-toggler {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  width: 70px;
+  cursor: pointer;
+}
+
+.navbar-toggler span {
+  display: block;
+  background: $text-color;
+  border-radius:10px;
+  height:7px;
+  margin: 7px 0;
+  transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.navbar-toggler span:nth-of-type(1){
+  width:50%;
+}
+
+.navbar-toggler span:nth-of-type(2){
+  width:100%;
+}
+
+.navbar-toggler span:nth-of-type(3){
+  width:75%;
+}
+
+.toggled span:nth-of-type(1){
+  transform-origin:bottom;
+  transform:rotatez(45deg) translate(8px,0px)
+}
+
+.toggled span:nth-of-type(2){
+  transform-origin:top;
+  transform:rotatez(-45deg)
+}
+
+.toggled span:nth-of-type(3){
+  transform-origin:bottom;
+  width:50%;
+  transform: translate(30px,-11px) rotatez(45deg);
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.socials__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
