@@ -342,9 +342,30 @@ img {
 }
 
 .resume__section {
+  display: grid;
+  grid-template-columns: 1fr 2.64fr;
   padding: 14px 0;
   border-bottom: 0.5px solid #e2e8f0;
 }
+
+.resume__section-work,
+.resume__section-title-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resume__section-content-row--separated {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto;
+}
+
+.resume__content-title {
+  grid-column: span 2;
+}
+
 
 // .resume__header {
 //   height: 160px;

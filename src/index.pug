@@ -57,22 +57,27 @@ html(lang="en" data-theme='light')
             section.resume__section.resume__section--education
               h3.resume__section-title Education
               .resume__section-content 
-                h3.resume__content-title Hexlet College
-                p.resume__content-text — Programmer
-              p.resume__date
-                time.resume__date-start Oct 2022&nbsp;
-                |- 
-                time.resume__date-end present
+                .resume__section-content-row
+                  .resume__section-work
+                    .resume__section-title-wrapper
+                      h3.resume__content-title Hexlet College&nbsp;
+                      p.resume__content-subtitle — Programmer
+                    p.resume__date
+                      time.resume__date-start Oct 2022&nbsp;
+                      |- 
+                      time.resume__date-end present
             section.resume__section.resume__section--experience
               h3.resume__section-title Experience
               .resume__section-content 
                 .resume__section-content-row
-                  h3.resume__content-title Internship
-                  p.resume__content-text — Front-End Developer
-                  p.resume__date
-                    time.resume__date-start Oct 2022&nbsp;
-                    |- 
-                    time.resume__date-end present
+                  .resume__section-work
+                    .resume__section-title-wrapper
+                      h3.resume__content-title Internship&nbsp;
+                      p.resume__content-text — Front-End Developer
+                    p.resume__date
+                      time.resume__date-start Oct 2022&nbsp;
+                      |- 
+                      time.resume__date-end present
                   ul.resume__label-list 
                     li.resume__label-item Bootstrap
                     li.resume__label-item Tailwind CSS
@@ -83,7 +88,8 @@ html(lang="en" data-theme='light')
               h3.resume__section-title Featured Project
               .resume__section-content 
                 .resume__section-content-row
-                  h3.resume__content-title Internship
+                  .resume__section-title-wrapper
+                    h3.resume__content-title Internship
                   ul.resume__label-list 
                     li.resume__label-item Bootstrap
                     li.resume__label-item Tailwind CSS
@@ -98,45 +104,40 @@ html(lang="en" data-theme='light')
             section.resume__section.resume__section--skills
               h3.resume__section-title Skills & Tools
               .resume__section-content 
-                .resume__section-content-row
+                .resume__section-content-row--separated
                   p.resume__content-label Underline indicators
                   ul.resume__label-list 
                     li.resume__label-item Frequently used
                     li.resume__label-item Occasionally
-                .resume__section-content-row
+                .resume__section-content-row--separated
                   h3.resume__content-title Languages
-                  .resume__content-line
-                    p.resume__content-label Front-end
-                    ul.resume__label-list 
-                      li.resume__label-item Bootstrap
-                      li.resume__label-item Tailwind CSS
-                      li.resume__label-item React
-                  .resume__content-line
-                    p.resume__content-label Back-end
-                    ul.resume__label-list 
-                      li.resume__label-item Bootstrap
-                      li.resume__label-item Tailwind CSS
-                      li.resume__label-item React
-                .resume__section-content-row
+                  p.resume__content-label Front-end
+                  ul.resume__label-list 
+                    li.resume__label-item Bootstrap
+                    li.resume__label-item Tailwind CSS
+                    li.resume__label-item React
+                  p.resume__content-label Back-end
+                  ul.resume__label-list 
+                    li.resume__label-item Bootstrap
+                    li.resume__label-item Tailwind CSS
+                    li.resume__label-item React
+                .resume__section-content-row--separated
                   h3.resume__content-title Technologies
-                  .resume__content-line
-                    p.resume__content-label Front-end
-                    ul.resume__label-list 
-                      li.resume__label-item Bootstrap
-                      li.resume__label-item Tailwind CSS
-                      li.resume__label-item React
-                  .resume__content-line
-                    p.resume__content-label Back-end
-                    ul.resume__label-list 
-                      li.resume__label-item Bootstrap
-                      li.resume__label-item Tailwind CSS
-                      li.resume__label-item React
-                .resume__section-content-row
+                  p.resume__content-label Front-end
+                  ul.resume__label-list 
+                    li.resume__label-item Bootstrap
+                    li.resume__label-item Tailwind CSS
+                    li.resume__label-item React
+                  p.resume__content-label Back-end
+                  ul.resume__label-list 
+                    li.resume__label-item Bootstrap
+                    li.resume__label-item Tailwind CSS
+                    li.resume__label-item React
+                .resume__section-content-row--separated
                   h3.resume__content-title Tools
-                  .resume__content-line
-                    p.resume__content-label Other
-                    ul.resume__label-list 
-                      li.resume__label-item Git
-                      li.resume__label-item Node.js
-                      li.resume__label-item Figma
+                  p.resume__content-label Other
+                  ul.resume__label-list 
+                    li.resume__label-item Git
+                    li.resume__label-item Node.js
+                    li.resume__label-item Figma
     footer.page__footer
