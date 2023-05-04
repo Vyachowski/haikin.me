@@ -1,0 +1,28 @@
+// STATEMENTS
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-VariableFont.ttf") format("truetype");
+  font-display: swap;
+}
+
+// Colors
+$background-color: #ffffff;
+$dark-background-color: #ffffff;
+$text-color: #637381;
+$title-color: #334155;
+$subtitle-color: #475569;
+$link-color: #090e34;
+$accent-color: #335eff;
+
+// Text
+$text-size: 14px;
+$line-height: 1.25;
+$basic-font: "Inter", Arial, system-ui, sans-serif;
+
+// Breakpoints
+$xs: 320px;
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1536px;
