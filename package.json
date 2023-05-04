@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "live-server --watch=\"dist/*.css,dist/*.html\" --mount=/:dist",
+    "serve": "live-server --watch=\"dist/*.css,dist/*.html\" --mount=/:dist --port=3001 --host=127.0.0.1",
     "build:scss-to-css": "node-sass src/scss -o dist/css",
     "build:pug-to-html": "pug src -o dist --pretty",
     "build:post-css": "postcss --no-map --use autoprefixer cssnano -d dist/css --ext .min.css dist/css/*.css",
