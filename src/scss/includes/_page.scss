@@ -1,3 +1,9 @@
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
+}
+
 .page__header {
   display: flex;
   justify-content: space-between;

@@ -1,22 +1,23 @@
-
+$resume-font-size: 1rem;
 
 .resume {
   width: 90%;
-  max-width: 788px;
-  height: auto;
+  height: max-content;
+  max-width: 768px;
   margin: auto;
-  box-shadow: 0 1rem 3rem rgba(black,.175);
   color: #334155;
-  aspect-ratio: 620 / 877;
+  font-size: $resume-font-size;
+  box-shadow: 0 1rem 3rem rgba(black,.175);
   transition: all 0.5s ease-in-out;
+
 
   &:hover {
     -webkit-transform: scale(1.05);
-       -moz-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-         -o-transform: scale(1.05);
-            transform: scale(1.05);
-          }
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+  }
 }
 
 .resume__header {
@@ -34,7 +35,7 @@
 .resume__title {
   margin: 0;
   margin-bottom: 4px;
-  font-size: 2rem;
+  font-size: 4 * $text-size;
   font-weight: 800;
   color: #334155;
 }
@@ -42,7 +43,7 @@
 .resume__subtitle {
   margin: 0;
   margin-bottom: 20px;
-  font-size: 10px;
+  font-size: 1.2rem;
   font-weight: 500;
   color: #64748B;
 }
@@ -145,16 +146,21 @@
 
 .resume__content {
   width: 90%;
-  height: 400px;
   margin: 0 auto;
 }
 
 .resume__section {
   display: grid;
-  grid-template-columns: 1fr 2.64fr;
+  grid-template-columns: 1fr;
+  gap: 10px;
   align-items: start;
   padding: 14px 0;
   border-bottom: 0.5px solid #e2e8f0;
+
+  @media (min-width: $md) {
+    grid-template-columns: 1fr 2.64fr;
+    gap: 0px;
+  }
 }
 
 .resume__section-work,
@@ -165,19 +171,24 @@
   align-items: center;
 }
 
+.resume__section-work {
+  gap: 10px;
+}
+
 .resume__section-work:not(:only-child) {
   margin-bottom: 6px;
 }
 
-.resume__section-title {
+.resume__section-title,
+.resume__content-title {
   margin: 0;
-  font-size: 9px;
+  font-size: 1em;
   font-weight: 700;
 }
 
 .resume__content-subtitle {
   margin: 0;
-  font-size: 9px;
+  font-size: 1em;
 }
 
 .resume__date {
@@ -201,13 +212,6 @@
     grid-template-rows: auto;
     gap: 2px;
   }
-}
-
-.resume__content-title {
-  grid-column: span 2;
-  margin: 0;
-  font-size: 9px;
-  font-weight: 700;
 }
 
 .resume__achievements-list {
