@@ -1,3 +1,4 @@
+// Common styles
 :root {
   font-size: $text-size;
   font-family: $basic-font;
@@ -33,4 +34,37 @@ img {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+// Text
+.title {
+  margin: 0;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 108px;
+  color: $title-color;
+
+  &--centered {
+    text-align: center;
+  }
+}
+
+.subtitle {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+//Wrappers
+.content-wrapper {
+  max-width: 75rem;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+//Theme toggler
+.theme-toggler {
+  all: unset;
+  display: block;
+  line-height: 0;
+  cursor: pointer;
 }

@@ -1,0 +1,22 @@
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.navbar__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navbar__link {
+  display: block;
+  text-decoration: none;
+  color: $link-color;
+}
