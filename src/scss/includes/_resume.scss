@@ -61,14 +61,14 @@ $resume-font-size: 14px;
 
 .resume {
   width: 90%;
+  max-width:1240px;
   height: max-content;
-  max-width: 768px;
   margin: auto;
   color: #334155;
   font-size: $resume-font-size;
   box-shadow: 0 1rem 3rem rgba(black,.175);
   transition: all 0.5s ease-in-out;
-
+  aspect-ratio: 1 / 1.4;
 
   &:hover {
     -webkit-transform: scale(1.05);
@@ -122,18 +122,11 @@ $resume-font-size: 14px;
   margin-bottom: 6px;
 }
 
-.resume__location {
-  font-style: normal;
-  font-size: 0.5em;
-  line-height: 0.7em;
-  color: #334155;
-}
-
+.resume__location,
 .resume__email {
-  font-size: 0.5em;
-  line-height: 0.7em;
+  font-style: normal;
   text-decoration: none;
-  color: #334155;
+  color: inherit;
 }
 
 .resume__socials-list {
