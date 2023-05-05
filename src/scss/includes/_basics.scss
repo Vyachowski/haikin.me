@@ -32,6 +32,10 @@ img {
   background-color: $background;
 }
 
+:root[data-theme='dark'] {
+  background-color: $dark-background;
+}
+
 // Text
 .title {
   margin: 0;
