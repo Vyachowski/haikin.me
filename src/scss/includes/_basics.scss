@@ -3,16 +3,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  height: auto;
-  font-size: $text-size;
-  font-family: $basic-font;
-}
-
-:root[data-theme='light'] {
-  background-color: $background-color;
-}
-
 img {
   display: block;
   object-fit: contain;
@@ -32,13 +22,23 @@ img {
   overflow: hidden;
 }
 
+// Root styles
+:root {
+  font-size: $text-size;
+  font-family: $basic-font;
+}
+
+:root[data-theme='light'] {
+  background-color: $background;
+}
+
 // Text
 .title {
   margin: 0;
   font-size: 72px;
   font-weight: 800;
   line-height: 108px;
-  color: $title-color;
+  color: $title;
 
   &--centered {
     text-align: center;

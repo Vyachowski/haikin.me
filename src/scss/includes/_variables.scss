@@ -6,13 +6,27 @@
 }
 
 // Colors
-$background-color: #ffffff;
-$dark-background-color: #ffffff;
-$text-color: #637381;
-$title-color: #334155;
-$subtitle-color: #475569;
-$link-color: #090e34;
 $accent-color: #335eff;
+
+// Light Theme
+$text-primary: rgba(0, 0, 0, 0.92);
+// $text-secondary: rgba(#7733FF, 0.18);
+$title: #334155;
+$subtitle: #475569;
+$link: #090e34;
+$link-underline: rgba(#7733FF, 0.18);
+$background: #ffffff;
+$border: #e2e8f0;
+
+
+// Dark Theme
+$dark-text-primary: #e2e8f0;
+$dark-text-secondary: #cbd5e1;
+$dark-title-color: #334155;
+$dark-subtitle-color: #475569;
+$dark-link-color: #090e34;
+$dark-background: #0f172a;
+$dark-border: #334155;
 
 // Text
 $text-size: 14px;
