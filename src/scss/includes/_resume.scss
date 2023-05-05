@@ -1,4 +1,63 @@
-$resume-font-size: 1rem;
+//- VARIABLES
+
+$resume-font-size: 14px;
+
+//- COMMON STYLES
+
+//-- Text
+
+.resume__title {
+  margin: 0;
+  margin-bottom: 4px;
+  font-size: 3em;
+  font-weight: 800;
+}
+
+.resume__subtitle {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #64748B;
+}
+
+.resume__content {
+  
+  &--sm {
+    font-size: $resume-font-size - 1px;
+  }
+
+  &--xs {
+    font-size: $resume-font-size - 2px;
+  }
+}
+
+.resume__label-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.resume__label {
+  padding: 1px 3px;
+  font-weight: 500;
+  border-radius: 3px;
+  color: $label;
+  background-color: $label-background;
+
+  &--sm {
+    font-size: $resume-font-size - 1px;
+  }
+
+  &--xs {
+    font-size: $resume-font-size - 2px;
+  }
+}
+
+//- OTHER STYLES
 
 .resume {
   width: 90%;
@@ -28,40 +87,28 @@ $resume-font-size: 1rem;
   overflow: hidden;
 }
 
-.resume__background-wrapper::before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: conic-gradient(from 182.59deg at 50% 50%, #FE79B9 0deg, #AD00FF 150deg, #2489FF 360deg);
-  opacity: 0.92;
-  filter: blur(60px);
-  transform: rotate(-6.02deg);
-  z-index: -2;
-  content: "";
-}
-
 .resume__background-wrapper {
   padding: 40px 0 16px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
   z-index: -1;
-}
 
-.resume__title {
-  margin: 0;
-  margin-bottom: 4px;
-  font-size: 3 * $text-size;
-  font-weight: 800;
-  color: #334155;
-}
+  &--dark {
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, #0F172A 100%);
+  }
 
-.resume__subtitle {
-  margin: 0;
-  margin-bottom: 20px;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #64748B;
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: conic-gradient(from 182.59deg at 50% 50%, #FE79B9 0deg, #AD00FF 150deg, #2489FF 360deg);
+    opacity: 0.92;
+    filter: blur(60px);
+    transform: rotate(-6.02deg);
+    z-index: -2;
+    content: "";
+  }
 }
 
 .resume__contacts {
@@ -77,14 +124,14 @@ $resume-font-size: 1rem;
 
 .resume__location {
   font-style: normal;
-  font-size: 0.5rem;
-  line-height: 0.7rem;
+  font-size: 0.5em;
+  line-height: 0.7em;
   color: #334155;
 }
 
 .resume__email {
-  font-size: 0.5rem;
-  line-height: 0.7rem;
+  font-size: 0.5em;
+  line-height: 0.7em;
   text-decoration: none;
   color: #334155;
 }
@@ -107,7 +154,7 @@ $resume-font-size: 1rem;
   padding: 4px 8px 4px 18px;
   border: 0.5px solid black;
   border-radius: 10px;
-  font-size: .5rem;
+  font-size: .5em;
   font-weight: 600;
   text-decoration: none;
   color: inherit;
@@ -209,7 +256,7 @@ $resume-font-size: 1rem;
 
 .resume__date {
   margin: 0;
-  font-size: 8px;
+  font-size: .5em;
   font-weight: 500;
 }
 
@@ -253,32 +300,4 @@ $resume-font-size: 1rem;
     background-color: #cbd5e1;
     content: "";
   }
-}
-
-.resume__text {
-  font-size: 7px;
-  line-height: 11px;
-  margin: 0;
-
-  &--secondary {
-    color: #64748b;
-  }
-}
-
-.resume__label-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.resume__label {
-  padding: 1px 3px;
-  font-size: 7px;
-  font-weight: 500;
-  border-radius: 3px;
-  color: #64748b;
-  background-color: #f1f5f9;
 }

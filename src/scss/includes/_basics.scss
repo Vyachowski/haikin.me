@@ -22,27 +22,12 @@ img {
   overflow: hidden;
 }
 
-// Root styles
-:root {
-  font-size: $text-size;
-  font-family: $basic-font;
-}
-
-:root[data-theme='light'] {
-  background-color: $background;
-}
-
-:root[data-theme='dark'] {
-  background-color: $dark-background;
-}
-
 // Text
 .title {
   margin: 0;
   font-size: 72px;
   font-weight: 800;
   line-height: 108px;
-  color: $title;
 
   &--centered {
     text-align: center;
@@ -53,6 +38,7 @@ img {
   font-weight: 800;
   font-size: 32px;
   line-height: 40px;
+  color: $text-secondary;
 }
 
 .explainer {
@@ -73,4 +59,10 @@ img {
   display: block;
   line-height: 0;
   cursor: pointer;
+}
+
+// Link
+
+.link {
+  background: $link-underline;
 }

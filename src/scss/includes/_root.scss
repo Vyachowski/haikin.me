@@ -1,0 +1,19 @@
+// Root styles
+:root {
+  font-size: $text-size;
+  font-family: $basic-font;
+}
+
+:root[data-theme='light'] {
+  color: $text-primary;
+  // $text-secondary
+  // $progress
+  // $border
+  // $label
+  // $label-background
+  background-color: $background;
+}
+
+:root[data-theme='dark'] {
+  background-color: $dark-background;
+}
