@@ -52,19 +52,38 @@ img {
   }
 }
 
-//Wrappers
-.content-wrapper {
-  max-width: 75rem;
-  margin: auto;
-  padding: 1.5rem;
+.text {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+
+  &--xs {
+    font-size: $text-size - 2px;
+  }
+
+  &--sm {
+    font-size: $text-size - 1px;
+  }
 }
 
-//Theme toggler
-.theme-toggler {
-  all: unset;
-  display: block;
-  line-height: 0;
-  cursor: pointer;
+.label {
+  padding: 0.075rem .215rem;
+  border-radius: $text-size / 4.7;
+  color: $text-secondary;
+  background-color: $label-background;
+
+  &--xs {
+    font-family: monospace;
+    background-color: transparent;
+    color: $text-primary;
+    font-size: 0.86rem;
+  }
+
+  &--sm {
+    font-size: 0.93rem;
+  }
 }
 
 // Link
@@ -98,4 +117,19 @@ img {
     left: 0;
     right: 0;
   }
+}
+
+//Wrappers
+.content-wrapper {
+  max-width: 75rem;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+//Theme toggler
+.theme-toggler {
+  all: unset;
+  display: block;
+  line-height: 0;
+  cursor: pointer;
 }

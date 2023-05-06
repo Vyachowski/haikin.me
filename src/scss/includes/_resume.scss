@@ -4,7 +4,6 @@ $resume-font-size: 14px;
 
 //- COMMON STYLES
 
-
 .resume {
   width: 90%;
   max-width:1240px;
@@ -47,18 +46,13 @@ $resume-font-size: 14px;
   }
   
   &__label {
-    padding: 1px 3px;
-    font-weight: 500;
-    border-radius: 3px;
-    color: $label;
-    background-color: $label-background;
   
     &--sm {
-      font-size: $resume-font-size - 1px;
+      
     }
   
     &--xs {
-      font-size: $resume-font-size - 2px;
+      
     }
   }
   
@@ -244,8 +238,6 @@ $resume-font-size: 14px;
   
   &__date {
     margin: 0;
-    font-size: .5em;
-    font-weight: 500;
   }
   
   &__section-content {
@@ -284,12 +276,12 @@ $resume-font-size: 14px;
   
   &__achievements-list li {
     position: relative;
-    padding-left: 11px;
+    padding-left: 0.8rem;
   
     &::before {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 0.5em;
+      transform: translateY(-20%);
       left: 0;
       width: 5px;
       height: 5px;
