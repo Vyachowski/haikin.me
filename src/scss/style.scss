@@ -1,9 +1,12 @@
+// Basic styles
 @import "includes/_reset.scss";
 @import "includes/_variables.scss";
 @import "includes/_root.scss";
+// Block styles
 @import "includes/_container.scss";
 @import "includes/_text.scss";
 @import "includes/_page.scss";
+@import "includes/_icon.scss";
 @import "includes/_list.scss";
 @import "includes/_theme.scss";
 @import "includes/_logo.scss";

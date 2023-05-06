@@ -2,23 +2,24 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100%;
-}
 
-.page__header {
-  display: flex;
-  justify-content: space-between;
-  padding: 24px 16px;
-  padding-bottom: 5px;
-}
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 16px;
+    padding-bottom: 5px;
+  }
 
-.page__body {
-  margin: 0;
-}
+  &__body {
+    margin: 0;
+  }
 
-.page__content {
-  padding: 50px 0;
-}
+  &__content {
+    padding: 50px 0;
+  }
 
-.page__title {
-  margin-bottom: 3rem;
+  &__title {
+    margin-bottom: 3rem;
+  }
+
 }

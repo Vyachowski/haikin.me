@@ -68,6 +68,10 @@ $resume-font-size: 14px;
     margin: 0 auto;
     margin-bottom: 6px;
   }
+
+  &__email {
+    display: block;
+  }
   
   &__socials-link {
     position: relative;
@@ -95,7 +99,7 @@ $resume-font-size: 14px;
       background-color: #f6f3ff;
   
       &::before {
-        background-image: url(../assets/icons/site.svg);
+        background-image: url(../assets/icons/site-icon.svg);
       }
     }
   
@@ -105,7 +109,7 @@ $resume-font-size: 14px;
       background-color: #f1f8ff;
   
       &::before {
-        background-image: url(../assets/icons/linkedin.svg);
+        background-image: url(../assets/icons/linkedin-icon.svg);
       }
     }
   
@@ -115,7 +119,7 @@ $resume-font-size: 14px;
       background-color: #f2f2f2;
   
       &::before {
-        background-image: url(../assets/icons/github.svg);
+        background-image: url(../assets/icons/github-icon.svg);
       }
     }
   }
@@ -205,6 +209,26 @@ $resume-font-size: 14px;
 
     &--separated > .text:first-child{
       grid-column: span 2;
+    }
+  }
+
+  &__icon {
+
+    &--address,
+    &--mail {
+      margin-right: 2px;
+      vertical-align: baseline;
+    }
+
+    &--date {
+      position: relative;
+      top: 2.5px;
+      margin-right: 4px;
+      vertical-align: baseline;
+    }
+
+    &--portfolio {
+      margin-right: 3px;
     }
   }
   

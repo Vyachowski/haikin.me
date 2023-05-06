@@ -119,4 +119,20 @@
     left: 0;
     right: 0;
   }
+
+  &--icon {
+    padding-left: 12px;
+  
+    &::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-40%);
+      left: 0;
+      width: 12px;
+      height: 9px;
+      background-image: url("../../assets/icons/link-icon.svg");
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
 }
