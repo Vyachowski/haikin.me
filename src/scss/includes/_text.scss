@@ -1,29 +1,7 @@
-// Common styles
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-img {
-  display: block;
-  object-fit: contain;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 // Text
+
 .title {
+  margin: 0;
   font-size: 4.5rem;
   font-weight: 800;
 
@@ -59,30 +37,54 @@ img {
   font-style: normal;
   text-decoration: none;
 
+  &--bold {
+    font-weight: 700;
+  }
+
   &--xs {
-    font-size: $text-size - 2px;
+    font-size: 0.75em;
   }
 
   &--sm {
-    font-size: $text-size - 1px;
+    font-size: 0.85em;
+  }
+
+  &-color {
+    color: $text-primary;
+
+    &--secondary {
+      color: $text-secondary;
+    }
   }
 }
 
 .label {
-  padding: 0.075rem .215rem;
+  margin: 0;
+  padding: 0.1rem .3rem;
   border-radius: $text-size / 4.7;
-  color: $text-secondary;
+  font-weight: 400;
+  color: $label;
   background-color: $label-background;
 
+  &-color {
+    &--secondary {
+      color: $label;
+    }
+  }
+
   &--xs {
-    font-family: monospace;
+    padding: 0;
     background-color: transparent;
-    color: $text-primary;
     font-size: 0.86rem;
   }
 
   &--sm {
     font-size: 0.93rem;
+  }
+
+  &--monospace {
+    padding: 0;
+    font-family: monospace;
   }
 }
 
@@ -117,19 +119,4 @@ img {
     left: 0;
     right: 0;
   }
-}
-
-//Wrappers
-.content-wrapper {
-  max-width: 75rem;
-  margin: auto;
-  padding: 1.5rem;
-}
-
-//Theme toggler
-.theme-toggler {
-  all: unset;
-  display: block;
-  line-height: 0;
-  cursor: pointer;
 }

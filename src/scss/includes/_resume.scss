@@ -5,9 +5,7 @@ $resume-font-size: 14px;
 //- COMMON STYLES
 
 .resume {
-  width: 90%;
-  max-width:1240px;
-  height: max-content;
+  height: auto;
   margin: auto;
   color: #334155;
   font-size: $resume-font-size;
@@ -23,37 +21,8 @@ $resume-font-size: 14px;
     transform: scale(1.05);
   }
 
-  &__title {
-    margin: 0;
-    margin-bottom: 0.15rem;
-  }
-  
-  &__subtitle {
-    margin: 0;
-    margin-bottom: 20px;
-    color: $text-secondary;
-  }
-  
-  &__content {
-    
-    &--sm {
-      font-size: $resume-font-size - 1px;
-    }
-  
-    &--xs {
-      font-size: $resume-font-size - 2px;
-    }
-  }
-  
-  &__label {
-  
-    &--sm {
-      
-    }
-  
-    &--xs {
-      
-    }
+  @media (min-width: $lg) {
+    max-width: 90%;
   }
   
   &__header {
@@ -68,6 +37,7 @@ $resume-font-size: 14px;
     padding: 40px 0 16px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
     z-index: -1;
+    text-align: center;
   
     &--dark {
       background: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, #0F172A 100%);
@@ -99,35 +69,12 @@ $resume-font-size: 14px;
     margin-bottom: 6px;
   }
   
-  &__location,
-  &__email {
-    font-style: normal;
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  &__socials-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    width: 40%;
-    margin: 0 auto;
-    padding: 0;
-    list-style-type: none;
-  }
-  
   &__socials-link {
     position: relative;
     display: block;
-    padding: 4px 8px 4px 18px;
+    padding: 0.34em 0.67em 0.34em 1.5em;
     border: 0.5px solid black;
     border-radius: 10px;
-    font-size: .5em;
-    font-weight: 600;
-    text-decoration: none;
-    color: inherit;
   
     &::before {
       position: absolute;
@@ -255,15 +202,10 @@ $resume-font-size: 14px;
       grid-template-rows: auto;
       gap: 2px;
     }
-  }
-  
-  &__label-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+
+    &--separated > .text:first-child{
+      grid-column: span 2;
+    }
   }
   
   &__achievements-list {
