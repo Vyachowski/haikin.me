@@ -5,13 +5,11 @@ $resume-font-size: 14px;
 //- COMMON STYLES
 
 .resume {
-  height: auto;
   margin: auto;
   color: #334155;
   font-size: $resume-font-size;
   box-shadow: 0 1rem 3rem rgba(black,.175);
   transition: all 0.5s ease-in-out;
-  aspect-ratio: 1 / 1.4;
 
   &:hover {
     -webkit-transform: scale(1.05);
@@ -22,7 +20,8 @@ $resume-font-size: 14px;
   }
 
   @media (min-width: $lg) {
-    max-width: 90%;
+    width: 80%;
+    aspect-ratio: 1 / 1.4;
   }
   
   &__header {
