@@ -1,0 +1,12 @@
+extends templates/bases/_base
+
+block variables
+  - const lang = "en"
+  - const page_title = "Resume of a Fullstack developer – Slava Haikin"
+  - const page_description = "CV (Resume) with a essential info about my path as a web-developer"
+block additional__styles
+  link(rel="stylesheet" href="css/resume.css")
+block content__header
+  h1.page__title.title.title--centered CV / Resume
+block content
+  include templates/includes/_resume
