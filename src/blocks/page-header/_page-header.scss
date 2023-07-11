@@ -3,7 +3,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 3.5rem;
+  min-height: 80px;
+  border-bottom: 1px solid $border-color;
+  padding-inline: 30px;
 
   @media (min-width: $lg) {
     justify-content: space-between;

@@ -1,10 +1,21 @@
-// Basic styles
 @import 'variables';
 @import 'reset';
-@import 'basics';
 
-// Blocks
+// Basic
+@import '../blocks/page/page';
+@import '../blocks/button/button';
+@import '../blocks/container/container';
+@import '../blocks/visually-hidden/visually-hidden';
+
+// Content
+@import '../blocks/list/list';
+@import '../blocks/title/title';
+@import '../blocks/subtitle/subtitle';
+
+// Header
 @import '../blocks/page-header/page-header';
 @import '../blocks/logo/logo';
 @import '../blocks/navbar/navbar';
 @import '../blocks/menu-toggle/menu-toggle';
+
+// Footer
