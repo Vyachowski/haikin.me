@@ -43,6 +43,14 @@
     &--active {
       font-weight: bold;
     }
+
+    &:hover {
+      background-color: rgba(#d9d9d9, 0.1);
+    }
+
+    &:active {
+      background-color: rgba(#d9d9d9, 0.1);
+    }
     
     @media (min-width: $lg) {
 
