@@ -8,7 +8,9 @@ block blocks
   include blocks/page-header/page-header
   include blocks/logo/logo
   include blocks/navbar/navbar
+  include blocks/menu-toggle/menu-toggle
 block content
-  +header
+  +page-header
     +logo
     +navbar(3)
+    +menu-toggle

@@ -21,27 +21,23 @@ $xxl: 1536px;
 $xxxl: 1920px;
 
 // COMMON VARIABLES
-$accent-color: #d10ed1;
-$secondary-color: #10a3da;
-$max-page-width: 1200px;
+$accent-color: #2673e8;
+$secondary-color: #667080;
+$max-page-width: 1920px;
 
 // FONT VARIABLES
 $text-size: 14px;
 $line-height: 1.25;
 $basic-font: 'Inter', Arial, system-ui, sans-serif;
-$secondary-font: 'Open Sans', Arial, system-ui, sans-serif;
+$secondary-font: 'Roboto Mono', Arial, system-ui, sans-serif;
 
 // LIGHT THEME VARIABLES
-$text-primary-color: rgba(0, 0, 0, 0.92);
+$text-primary-color: rgba(0, 0, 0, 1);
 $text-secondary-color: #64748b;
-$title-color: #334155;
-$subtitle-color: #475569;
-$progress: rgba(#64748b, 0.24);
-$link-underline: rgba(#7733ff, 0.18);
+$title-color: #000000;
+$subtitle-color: #667080;
 $background-color: #ffffff;
-$border-color: #e2e8f0;
-$label-color: #64748b;
-$label-background-color: #f1f5f9;
+$border-color: #e5e5e6;
 
 :root,
 :root[data-theme='light'] {

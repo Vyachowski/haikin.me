@@ -1,0 +1,16 @@
+.logo {
+  text-decoration: none;
+
+  &__content {
+    color: #b9bbc2;
+    font-family: $secondary-font;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.32px;
+  }
+
+  &__content span {
+    color: $accent-color;
+  }
+}
