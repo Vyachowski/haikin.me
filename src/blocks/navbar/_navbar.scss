@@ -17,6 +17,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: fit-content;
+    height: auto;
     padding-block: 0; 
   }
 
@@ -27,7 +28,7 @@
     @media (min-width: $lg) {
       display: flex;
       flex-direction: row;
-      padding-bottom: none;
+      padding-bottom: 0;
       border-bottom: none;
     }
   }
@@ -51,14 +52,14 @@
     &:active {
       background-color: rgba(#d9d9d9, 0.1);
     }
-    
-    @media (min-width: $lg) {
+  }
+  
+  @media (min-width: $lg) {
 
-      &:last-child {
-      padding-right: 0;
+      &__nav-item:last-child .navbar__nav-link {
+        padding-right: 0;
       }
     }
-  }
 
   &__socials {
     align-self: center;
