@@ -1,6 +1,7 @@
 doctype html
 block variables
 block components
+block blocks
 html(lang= lang data-theme="light")
   head
     meta(charset="UTF-8")
@@ -16,11 +17,5 @@ html(lang= lang data-theme="light")
     link(rel="stylesheet" href="css/styles.css")
     block additional__styles
   body.page
-    header.page__header
-      include ../includes/_header
-    main.page__content
-      block content__header
-      block content
-    footer.page__footer
-      include  ../includes/_footer
+    block content
     block scripts

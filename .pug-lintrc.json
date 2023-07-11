@@ -1,0 +1,9 @@
+{ 
+  "extends": "clock",
+  "validateExtensions": null,
+  "validateAttributeSeparator":
+  {
+    "separator": " ", 
+    "multiLineSeparator": "\n  "
+  }
+}

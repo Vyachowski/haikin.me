@@ -1,14 +1,14 @@
-extends templates/bases/_base
+extends templates/base
 
 block variables
   - const lang = "en"
-  - const page_title = "Fullstack developer – Slava Haikin"
-  - const page_description = "Personal page with bullets of me as a web developer"
-block content__header
-  h1.page__title.title.title--centered Slava Haikin - Full Stack Developer
+  - const page_title = "Title"
+  - const page_description = "Description"
+block blocks
+  include blocks/page-header/page-header
+  include blocks/logo/logo
+  include blocks/navbar/navbar
 block content
-  include templates/includes/_hero
-  include templates/includes/_features
-  include templates/includes/_creed
-  include templates/includes/_frontend-benefits
-  include templates/includes/_backend-benefits
+  +header
+    +logo
+    +navbar(3)

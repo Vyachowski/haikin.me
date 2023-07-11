@@ -8,7 +8,7 @@ $resume-font-size: 14px;
   margin: auto;
   color: #334155;
   font-size: $resume-font-size;
-  box-shadow: 0 1rem 3rem rgba(black,.175);
+  box-shadow: 0 1rem 3rem rgba(black, 0.175);
   transition: all 0.5s ease-in-out;
 
   &:hover {
@@ -23,7 +23,7 @@ $resume-font-size: 14px;
     width: 80%;
     aspect-ratio: 1 / 1.4;
   }
-  
+
   &__header {
     position: relative;
     border-bottom: 0.5px solid #e2e8f0;
@@ -31,32 +31,41 @@ $resume-font-size: 14px;
     min-height: 160px;
     overflow: hidden;
   }
-  
+
   &__background-wrapper {
     padding: 40px 0 16px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      #ffffff 100%
+    );
     z-index: -1;
     text-align: center;
-  
+
     &--dark {
-      background: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, #0F172A 100%);
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, #0f172a 100%);
     }
-  
+
     &::before {
       position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
       right: 0;
-      background: conic-gradient(from 182.59deg at 50% 50%, #FE79B9 0deg, #AD00FF 150deg, #2489FF 360deg);
+      background: conic-gradient(
+        from 182.59deg at 50% 50%,
+        #fe79b9 0deg,
+        #ad00ff 150deg,
+        #2489ff 360deg
+      );
       opacity: 0.92;
       filter: blur(60px);
       transform: rotate(-6.02deg);
       z-index: -2;
-      content: "";
+      content: '';
     }
   }
-  
+
   &__contacts {
     display: flex;
     flex-wrap: wrap;
@@ -71,14 +80,14 @@ $resume-font-size: 14px;
   &__email {
     display: block;
   }
-  
+
   &__socials-link {
     position: relative;
     display: block;
     padding: 0.34em 0.67em 0.34em 1.5em;
     border: 0.5px solid black;
     border-radius: 10px;
-  
+
     &::before {
       position: absolute;
       top: 50%;
@@ -89,44 +98,44 @@ $resume-font-size: 14px;
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      content: "";
+      content: '';
     }
-  
+
     &--site {
       color: $accent-color;
       border-color: $accent-color;
       background-color: #f6f3ff;
-  
+
       &::before {
         background-image: url(../assets/icons/site-icon.svg);
       }
     }
-  
+
     &--linkedin {
       color: #0a66c2;
       border-color: #0a66c2;
       background-color: #f1f8ff;
-  
+
       &::before {
         background-image: url(../assets/icons/linkedin-icon.svg);
       }
     }
-  
+
     &--github {
       color: #222222;
       border-color: #222222;
       background-color: #f2f2f2;
-  
+
       &::before {
         background-image: url(../assets/icons/github-icon.svg);
       }
     }
   }
-  
+
   &__wrapper {
     padding: 2.2rem 0;
   }
-  
+
   &__content {
     width: 95%;
     margin: 0 auto;
@@ -143,7 +152,7 @@ $resume-font-size: 14px;
       width: 65%;
     }
   }
-  
+
   &__section {
     display: grid;
     grid-template-columns: 1fr;
@@ -151,13 +160,13 @@ $resume-font-size: 14px;
     align-items: start;
     padding: 14px 0;
     border-bottom: 0.5px solid #e2e8f0;
-  
+
     @media (min-width: $md) {
       grid-template-columns: 1fr 2.64fr;
       gap: 0px;
     }
   }
-  
+
   &__section-work,
   &__section-title-wrapper {
     display: flex;
@@ -165,40 +174,40 @@ $resume-font-size: 14px;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   &__section-work {
     gap: 10px;
   }
-  
+
   &__section-work:not(:only-child) {
     margin-bottom: 6px;
   }
-  
+
   &__section-title,
   &__content-title {
     margin: 0;
     font-size: 1em;
     font-weight: 700;
   }
-  
+
   &__content-subtitle {
     margin: 0;
     font-size: 1em;
   }
-  
+
   &__date {
     margin: 0;
   }
-  
+
   &__section-content {
     display: grid;
     gap: 10px;
   }
-  
+
   &__section-content-row {
     display: grid;
     gap: 4px;
-  
+
     &--separated {
       display: grid;
       grid-template-columns: 1fr 3fr;
@@ -206,13 +215,12 @@ $resume-font-size: 14px;
       gap: 2px;
     }
 
-    &--separated > .text:first-child{
+    &--separated > .text:first-child {
       grid-column: span 2;
     }
   }
 
   &__icon {
-
     &--address,
     &--mail {
       margin-right: 2px;
@@ -230,7 +238,7 @@ $resume-font-size: 14px;
       margin-right: 3px;
     }
   }
-  
+
   &__achievements-list {
     display: grid;
     gap: 2px;
@@ -238,11 +246,11 @@ $resume-font-size: 14px;
     padding: 0;
     list-style-type: none;
   }
-  
+
   &__achievements-list li {
     position: relative;
     padding-left: 0.8rem;
-  
+
     &::before {
       position: absolute;
       top: 0.5em;
@@ -252,8 +260,7 @@ $resume-font-size: 14px;
       height: 5px;
       border-radius: 1.5px;
       background-color: #cbd5e1;
-      content: "";
+      content: '';
     }
   }
 }
-

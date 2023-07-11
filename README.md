@@ -1,5 +1,26 @@
-# Vyachowski.com
-Personal website for a fornt-end / back-end developer
+# Landing Page (Static) Boilerplate
+Ready-to-use environment for a simple one-page site.
+
+## Stack
+Build based on PUG, SCSS, JS with implemented Eslint, Stylelint, Puglint and Prettier.
+
+## Installation
+```npm ci```
+
+## Usage
+
+### Write HTML
+In file index.pug that later will be compiled to the plain html. 
+
+Firstly you can define variables on the top of the file and then write all other markup.
+
+### Write CSS
+- In file _variables.scss you can define basic variables for the whole site, like primary color, text size and etc.
+- In file styles.scss you can write all other styles for your site. Sections marked by [anchors](https://marketplace.visualstudio.com/items?itemName=ExodiusStudios.comment-anchors)
+
+### Run commands
+
+All commands are in Makefile: you can use linter, build or start your project with a short commands
 
 ## Branch Naming Convention
 
