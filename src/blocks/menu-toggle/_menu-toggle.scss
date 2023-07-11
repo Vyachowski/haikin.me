@@ -19,6 +19,10 @@
   transition: .5s ease-in-out;
   cursor: pointer;
 
+  @media (min-width: $lg) {
+    display: none;
+  }
+
   &__line {
     display: block;
     position: absolute;
