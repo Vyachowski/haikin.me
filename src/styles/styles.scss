@@ -1,13 +1,13 @@
 @import 'variables';
 @import 'reset';
 
-// Basic
+// Basic settings
 @import '../blocks/page/page';
-@import '../blocks/button/button';
-@import '../blocks/container/container';
-@import '../blocks/visually-hidden/visually-hidden';
 
-// Content
+// Common blocks
+@import '../blocks/visually-hidden/visually-hidden';
+@import '../blocks/container/container';
+@import '../blocks/button/button';
 @import '../blocks/list/list';
 @import '../blocks/title/title';
 @import '../blocks/subtitle/subtitle';
@@ -17,5 +17,8 @@
 @import '../blocks/logo/logo';
 @import '../blocks/navbar/navbar';
 @import '../blocks/menu-toggle/menu-toggle';
+
+// Main
+@import '../blocks/hero/hero';
 
 // Footer

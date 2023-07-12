@@ -1,5 +1,10 @@
 .logo {
   text-decoration: none;
+  margin-inline: auto;
+
+  @media (min-width: $lg) {
+    margin-inline: 0;
+  }
 
   &:hover {
     cursor: default;
