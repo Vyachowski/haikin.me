@@ -2,7 +2,11 @@
   padding-block: 60px;
   border-bottom: 1px solid $border-color;
   
+  @media (min-width: $lg) {
+    padding-block: 80px;
+  }
   @media (min-width: $xl) {
+    padding-block: 150px;
     background-image: url('../assets/images/hero-background.png');
     background-position: right center;
     background-repeat: no-repeat;
@@ -23,7 +27,7 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 120px;
-      gap: 60px;
+      gap: 95px;
     }
   }
 
@@ -35,6 +39,7 @@
       order: 2;
       width: 300px;
       height: 317px;
+      margin: 0;
     }
   }
 
