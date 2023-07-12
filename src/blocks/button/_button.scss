@@ -31,12 +31,13 @@
 
     &:hover {
       border-radius: 6px;
-      box-shadow: none;
+      box-shadow: 4px 4px 10px 0px rgba(#b9bbc2, 0.3);
       translate: 0 0;
     }
   
     &:active {
       background: transparent;
+      box-shadow: none;
     }
   }
 }

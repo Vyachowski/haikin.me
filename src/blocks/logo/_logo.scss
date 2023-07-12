@@ -1,4 +1,6 @@
 .logo {
+  width: max-content;
+  height: 48px;
   text-decoration: none;
   margin-inline: auto;
   z-index: 10;
@@ -20,7 +22,7 @@
     font-family: $secondary-font;
     font-size: 32px;
     font-weight: 700;
-    font-style: italic;
+    font-style: normal;
     line-height: 48px;
     letter-spacing: -0.32px;
   }

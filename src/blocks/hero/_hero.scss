@@ -1,5 +1,6 @@
 .hero {
   padding-block: 60px;
+  border-bottom: 1px solid $border-color;
   
   @media (min-width: $xl) {
     background-image: url('../assets/images/hero-background.png');
