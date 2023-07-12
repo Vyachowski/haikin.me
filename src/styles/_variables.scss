@@ -39,6 +39,7 @@ $subtitle-color: #667080;
 $background-color: #ffffff;
 $border-color: #e5e5e6;
 
+// BASIC STYLES
 :root,
 :root[data-theme='light'] {
   color: $text-primary-color;
@@ -50,7 +51,6 @@ $border-color: #e5e5e6;
 }
 
 // DARK THEME VARIABLES
-
 // $dark-text-primary-color: #e2e8f0;
 // $dark-text-secondary-color: #cbd5e1;
 // $dark-title-color: #334155;
@@ -67,7 +67,7 @@ $border-color: #e5e5e6;
 //   background-color: $background-color;
 // }
 
-//- SERVICE STYLES
+// SERVICE STYLES
 *,
 *::before,
 *::after {
