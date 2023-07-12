@@ -3,7 +3,6 @@
   justify-content: center;
   min-width: 130px;
   padding: 13px 24px;
-  border: none;
   text-decoration: none;
   font-family: $secondary-font;
   font-weight: 700;
@@ -20,12 +19,17 @@
     box-shadow: 4px 4px 10px 0px rgba(5, 93, 235, 0.3);
 
     &:hover {
-      box-shadow: 4px 4px 10px 0px rgba(5, 93, 235, 0.80);
+      box-shadow: 4px 4px 10px 0px rgba(5, 93, 235, 0.8);
       translate: -1px -1px;
     }
-  
+
     &:active {
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), $accent-color;
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.2) 100%
+        ),
+        $accent-color;
     }
   }
 
@@ -39,7 +43,7 @@
       box-shadow: 4px 4px 10px 0px rgba(#b9bbc2, 0.3);
       translate: 0 0;
     }
-  
+
     &:active {
       background: transparent;
       box-shadow: none;

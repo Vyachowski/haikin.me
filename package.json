@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Static site boilerplate (static site)",
   "scripts": {
-    "serve": "live-server --watch=\"build/*.css,build/*.html\" --mount=/:build --port=1024 --host=127.0.0.1",
+    "serve": "live-server --watch=\"build/**\" --mount=/:build --port=1024 --host=127.0.0.1",
     "clean": "del-cli build/*",
     "copy": "cpx 'src/**/*.{html,png,jpg,svg,ttf,otf,woff,woff2,json,webmanifest}' build",
     "copy:dist": "cpx 'build/**' dist && del 'dist/**/*.css' '!dist/**/*.min.css'",
@@ -23,7 +23,7 @@
     "build:post-css": "postcss --no-map --use autoprefixer cssnano -d build/styles --ext .min.css build/styles/*.css",
     "build:js": "babel src/scripts --out-file build/scripts/bundle.min.js",
     "build": "del-cli build/* && npm run lint && npm run prettify && npm run build:scss-to-css && npm run build:post-css && npm run build:pug-to-html && npm run build:js && npm run copy",
-    "watch:scss-to-css": "node-sass src -o build --watch",
+    "watch:scss-to-css": "node-sass src -o build --watch --recursive",
     "watch:pug-to-html": "pug src/*.pug -o build --watch --pretty",
     "watch:js": "babel src/scripts --watch --out-file build/scripts/bundle.min.js",
     "watch:copy": "cpx 'src/**/*.{html,png,jpg,svg,ttf,otf,woff,woff2,json,webmanifest}' build --watch",

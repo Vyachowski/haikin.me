@@ -1,7 +1,7 @@
 .hero {
   padding-block: 60px;
   border-bottom: 1px solid $border-color;
-  
+
   @media (min-width: $lg) {
     padding-block: 80px;
   }
@@ -122,7 +122,7 @@
     color: #b9bbc2;
     gap: 20px;
   }
-  
+
   &__techstack-item {
     transition-duration: 0.5s;
     &:hover {
