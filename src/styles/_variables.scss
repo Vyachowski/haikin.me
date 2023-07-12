@@ -26,7 +26,7 @@ $secondary-color: #667080;
 $max-page-width: 1920px;
 
 // FONT VARIABLES
-$text-size: 14px;
+$text-size: round(1.25vw);
 $line-height: 1.25;
 $basic-font: 'Inter', Arial, system-ui, sans-serif;
 $secondary-font: 'Roboto Mono', Arial, system-ui, sans-serif;
@@ -43,7 +43,7 @@ $border-color: #e5e5e6;
 :root[data-theme='light'] {
   color: $text-primary-color;
   font-family: $basic-font;
-  font-size: $text-size;
+  font-size: clamp(15px, $text-size, 20px);
   line-height: $line-height;
   background-color: $background-color;
   height: 100%;

@@ -1,6 +1,14 @@
 .logo {
   text-decoration: none;
 
+  &:hover {
+    cursor: default;
+  }
+
+  &[href]:hover {
+    cursor: pointer;
+  }
+
   &__content {
     color: #b9bbc2;
     font-family: $secondary-font;
