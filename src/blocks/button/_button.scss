@@ -1,13 +1,21 @@
 .button {
   display: inline-flex;
-  padding: 15px 32px;
+  padding: 13px 36.5px;
   border: none;
   text-align: center;
   text-decoration: none;
-  color: transparent;
+  font-family: $secondary-font;
+  font-weight: 700;
+  color: #ffffff;
   background-color: $accent-color;
+  letter-spacing: -0.32px;
+  border-radius: 0.3rem;
+  box-shadow: 4px 4px 10px 0px rgba(5, 93, 235, 0.30);
 
   &--secondary {
-    background-color: $secondary-color;
+    color: $text-primary-color;
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid #B9BBC2;
   }
 }
