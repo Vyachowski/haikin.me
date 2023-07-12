@@ -10,11 +10,13 @@ block blocks
   include blocks/navbar/navbar
   include blocks/menu-toggle/menu-toggle
   include blocks/hero/hero
+  include blocks/key-projects/key-projects
 block content
   +page-header
     +logo
     +menu-toggle
     +navbar(1)
   +hero
+  +key-projects
 block scripts 
   script(src="scripts/bundle.min.js") 
