@@ -50,6 +50,12 @@
   &__line:nth-child(3) {
     top: 18px;
   }
+}
+
+.page-header {
+  &--open .menu-toggle {
+    position: fixed;
+  }
 
   &--open .menu-toggle__line:nth-child(1) {
     top: 9px;

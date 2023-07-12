@@ -1,6 +1,7 @@
 .logo {
   text-decoration: none;
   margin-inline: auto;
+  z-index: 10;
 
   @media (min-width: $lg) {
     margin-inline: 0;
@@ -26,5 +27,14 @@
 
   &__content span {
     color: $accent-color;
+  }
+}
+
+.page-header {
+  &--open .logo {
+    position: fixed;
+    top: 15.6px;
+    left: 50%;
+    translate: -50% 0;
   }
 }

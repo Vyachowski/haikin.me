@@ -3,11 +3,17 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  width: 100vw;
   min-height: 80px;
+  height: fit-content;
   border-bottom: 1px solid $border-color;
   padding-inline: 30px;
 
   @media (min-width: $lg) {
     justify-content: space-between;
   }
+}
+
+.page-header--open {
+  
 }

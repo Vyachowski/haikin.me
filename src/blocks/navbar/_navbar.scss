@@ -1,13 +1,13 @@
 .navbar {
   position: fixed;
-  top: 80px;
+  top: 0;
   left: 0;
   z-index: 2;
   display: none;
   flex-direction: column;
   width: 100%;
-  height: calc(100vh - 80px);
-  padding-top: 30px;
+  height: 100vh;
+  padding-top: 79px;
   text-align: center;
   background-color: $background-color;
 
@@ -22,14 +22,14 @@
   }
 
   &__nav {
-    padding-bottom: 30px;
-    border-bottom: 1px solid $border-color;
+    padding-block: 30px;
+    border-block: 1px solid $border-color;
 
     @media (min-width: $lg) {
       display: flex;
       flex-direction: row;
-      padding-bottom: 0;
-      border-bottom: none;
+      padding-block: 0;
+      border-block: none;
     }
   }
 
@@ -37,6 +37,8 @@
     display: block;
     padding: 30px 30px;
     font-size: clamp(16px, $text-size, 20px);
+    line-height: 1.15;
+    min-height: 79px;
     text-decoration: none;
     color: inherit;
 
@@ -90,6 +92,8 @@
   }
 }
 
-.menu-toggle--open + .navbar {
-  display: flex;
+.page-header {
+  &--open .navbar {
+    display: flex;
+  }
 }
