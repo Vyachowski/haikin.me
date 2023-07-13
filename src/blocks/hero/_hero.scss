@@ -6,7 +6,9 @@
     padding-block: 80px;
   }
   @media (min-width: $xl) {
-    padding-block: 150px;
+    height: calc(100vh - 80px);
+    min-height: 700px;
+    padding-block: 20px;
     background-image: url('../assets/images/hero-background.png');
     background-position: right center;
     background-repeat: no-repeat;
@@ -14,7 +16,15 @@
   }
 
   &__wrapper {
-    max-width: $xxl;
+    max-width: $xxxl;
+
+    @media (min-width: $xl) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      height: 100%;
+    }
   }
 
   &__content {
@@ -26,7 +36,7 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 120px;
+      margin-block: auto;
       gap: 95px;
     }
   }
@@ -54,6 +64,7 @@
     @media (min-width: $xl) {
       order: 1;
       max-width: 60%;
+      margin-bottom: 0;
       text-align: left;
     }
   }
@@ -83,7 +94,7 @@
       margin-inline: auto;
     }
 
-    @media (min-width: $xxl) {
+    @media (min-width: $xl) {
       max-width: 60vw;
       margin-right: auto;
     }

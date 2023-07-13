@@ -1,5 +1,10 @@
 .container {
   width: 95vw;
-  max-width: $max-page-width;
   margin: auto;
+
+  @media(min-width: $xl) {
+    width: 90vw;
+    max-width: $max-page-width;
+    padding-inline: 50px;
+  }
 }
