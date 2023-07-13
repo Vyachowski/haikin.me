@@ -6,12 +6,29 @@
     flex-direction: column;
     gap: 30px;
     text-align: center;
+
+    @media (min-width: $lg) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+    }
+  }
+
+  &__text-wrapper {
+    @media (min-width: $lg) {
+      max-width: 40%;
+    }
   }
 
   &__form {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media (min-width: $lg) {
+      width: 40%;
+    }
   }
 
   &__field {
