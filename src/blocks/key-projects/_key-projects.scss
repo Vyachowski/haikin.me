@@ -17,6 +17,10 @@
   &__title {
     margin-bottom: 30px;
     text-align: center;
+
+    @media (min-width: $xl) {
+      margin-bottom: 70px;
+    }
   }
 
   &__list {
@@ -37,9 +41,18 @@
     gap: 30px;
 
     @media (min-width: $xl) {
-      grid-template-columns: 1fr 1fr;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
       align-items: center;
       column-gap: 60px;
+    }
+    
+
+    &--reversed {
+
+      @media (min-width: $xl) {
+        grid-template-columns: 1fr 1.5fr;
+      }
     }
 
     &--reversed .key-projects__image-wrapper {
@@ -65,7 +78,7 @@
       ),
       url('/assets/images/key-project-1.png'),
       lightgray -49.831px -0.043px / 124.772% 128.51% no-repeat;
-      background-position: center;
+      background-position: top center;
       background-size: cover;
     }
 
@@ -77,7 +90,7 @@
       ),
       url('/assets/images/key-project-2.png'),
       lightgray -49.831px -0.043px / 124.772% 128.51% no-repeat;
-      background-position: center;
+      background-position: top center;
       background-size: cover;
     }
   }
