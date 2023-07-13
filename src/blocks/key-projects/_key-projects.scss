@@ -24,12 +24,36 @@
     grid-template-columns: repeat(auto-fit, minmax(340px, 390px));
     justify-content: center;
     gap: 55px 30px;
+
+    @media (min-width: $xl) {
+      grid-template-columns: 1fr;
+      row-gap: 120px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media (min-width: $xl) {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      column-gap: 60px;
+    }
+
+    &--reversed .key-projects__image-wrapper {
+
+      @media (min-width: $xl) {
+        order: 1;
+      }
+    }
   }
 
   &__image-wrapper {
     width: 100%;
+    max-width: 710px;
     aspect-ratio: 340/210;
-    margin-bottom: 30px;
     border-radius: 4px;
     background-blend-mode: multiply, normal;
 
@@ -58,14 +82,27 @@
     }
   }
 
+  &__inner-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    min-height: 60%;
+  }
+
   &__text {
-    margin-bottom: 30px;
+    flex-grow: 1;
+    margin: 0;
+    font-size: 15px;
+  }
+
+  &__card-title {
+    margin: 0;
+    line-height: 1.2;
   }
 
   &__techstack-list {
     justify-content: flex-start;
     gap: 10px;
-    margin-bottom: 30px;
     font-family: $secondary-font;
     font-size: 12px;
     font-weight: 600;
