@@ -1,4 +1,10 @@
 .contact-form {
   padding-block: 60px;
 
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
 }
