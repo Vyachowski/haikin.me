@@ -62,9 +62,14 @@
   }
 
   &__divider {
+    display: none;
     width: 1px;
     height: 22px;
     background-color: #667080;
+
+    @media (min-width: $lg) {
+      display: block;
+    }
 
     @media (min-width: $xl) {
       display: none;
