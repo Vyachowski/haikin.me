@@ -28,7 +28,9 @@ dist: clean-dist
 	npm run copy:dist
 	npm run minify:html
 	npm run minify:js
-deploy:
+fast-deploy: dist
+  npm run deploy
+deploy: build dist
 	npm run deploy
 start:
 	npm run start
