@@ -1,6 +1,7 @@
 dist
 build
 node_modules
+.idea
 sftp.json
 **/.DS_Store
 *.code-workspace

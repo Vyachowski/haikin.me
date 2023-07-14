@@ -1,9 +1,9 @@
 extends templates/base
 
 block variables
-  - const lang = "en"
-  - const page_title = "Front-end Developer Slava Haikin"
-  - const page_description = "Info about me"
+  - const lang = "en";
+  - const page_title = "Front-end Developer Slava Haikin";
+  - const page_description = "Info about me";
 block blocks
   include blocks/page-header/page-header
   include blocks/logo/logo
@@ -12,6 +12,7 @@ block blocks
   include blocks/hero/hero
   include blocks/key-projects/key-projects
   include blocks/contact-form/contact-form
+  include blocks/page-footer/page-footer
 block content
   +page-header
     +logo
@@ -20,5 +21,6 @@ block content
   +hero
   +key-projects
   +contact-form
+  +page-footer
 block scripts 
   script(src="scripts/bundle.min.js") 
