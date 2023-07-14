@@ -7,7 +7,7 @@ mixin contact-form
         p.contact-form__text
           | I am totally open to a new job and new contacts so let’s discuss it in any 
           | convenient way. 
-      form.contact-form__form(action='#' method='get') 
+      form.contact-form__form(action='#' method='get' autocomplete='on') 
         p.contact-form__field
           label.contact-form__label(for="index_textarea") Message:
           textarea#index_textarea(name="index_textarea", cols="15", rows="5") Hi, Slava...
