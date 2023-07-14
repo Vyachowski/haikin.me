@@ -1,18 +1,18 @@
-mixin page-footer
+mixin page-footer(activeLinkNumber)
   footer.page-footer
-    .page-footer__wrapper.container
+    .page-footer__wrapper
       nav.page-footer__navbar
         ul.page-footer__nav-list.list.list--horizontal
           li.page-footer__nav-item
-            a.page-footer__nav-link(href="services.html" class=(activeLinkNumber === 2 ? 'page-footer__nav-link--active' : '')) Services
-          li.page-footer__nav-item
             a.page-footer__nav-link(href="about.html" class=(activeLinkNumber === 1 ? 'page-footer__nav-link--active' : '')) About
+          li.page-footer__nav-item
+            a.page-footer__nav-link(href="services.html" class=(activeLinkNumber === 2 ? 'page-footer__nav-link--active' : '')) Services
           li.page-footer__nav-item
             a.page-footer__nav-link(href="projects.html" class=(activeLinkNumber === 3 ? 'page-footer__nav-link--active' : '')) Projects
           li.page-footer__nav-item
-            a.page-footer__nav-link(href="today-i-learned.html" class=(activeLinkNumber === 5 ? 'page-footer__nav-link--active' : '')) TIL
-          li.page-footer__nav-item
             a.page-footer__nav-link(href="contacts.html" class=(activeLinkNumber === 4 ? 'page-footer__nav-link--active' : '')) Contacts
+          li.page-footer__nav-item
+            a.page-footer__nav-link(href="today-i-learned.html" class=(activeLinkNumber === 5 ? 'page-footer__nav-link--active' : '')) TIL
           li.page-footer__nav-item
             a.page-footer__nav-link(href="blog.html" class=(activeLinkNumber === 6 ? 'page-footer__nav-link--active' : '')) Blog
       p.page-footer__author Built by Slava Haikin

@@ -4,6 +4,7 @@ block variables
   - const lang = "en";
   - const page_title = "Front-end Developer Slava Haikin";
   - const page_description = "Info about me";
+  - const activePage = 1;
 block blocks
   include blocks/page-header/page-header
   include blocks/logo/logo
@@ -17,10 +18,10 @@ block content
   +page-header
     +logo
     +menu-toggle
-    +navbar(1)
+    +navbar(activePage)
   +hero
   +key-projects
   +contact-form
-  +page-footer
+  +page-footer(activePage)
 block scripts 
   script(src="scripts/bundle.min.js") 

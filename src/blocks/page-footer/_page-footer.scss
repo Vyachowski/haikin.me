@@ -19,8 +19,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      width: 90vw;
-      padding-inline: 50px;
+      padding-inline: 30px;
     }
   }
 
@@ -41,14 +40,14 @@
   }
 
   &__nav-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-      @media (min-width: $lg) {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-      }
+    @media (min-width: $lg) {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
   }
 
   &__nav-link {
@@ -77,6 +76,54 @@
       min-height: 79px;
       padding: 30px 30px;
       text-align: left;
+    }
+  }
+
+  &__nav-item:nth-child(1) {
+    order: 1;
+
+    @media (min-width: $lg) {
+      order: initial;
+    }
+  }
+
+  &__nav-item:nth-child(2) {
+    order: 3;
+
+    @media (min-width: $lg) {
+      order: initial;
+    }
+  }
+
+  &__nav-item:nth-child(3) {
+    order: 5;
+
+    @media (min-width: $lg) {
+      order: initial;
+    }
+  }
+
+  &__nav-item:nth-child(4) {
+    order: 2;
+
+    @media (min-width: $lg) {
+      order: initial;
+    }
+  }
+
+  &__nav-item:nth-child(5) {
+    order: 4;
+
+    @media (min-width: $lg) {
+      order: initial;
+    }
+  }
+
+  &__nav-item:nth-child(6) {
+    order: 6;
+
+    @media (min-width: $lg) {
+      order: initial;
     }
   }
 
