@@ -17,14 +17,6 @@ jobs:
         with:
           node-version: '20.2.0'
           cache: 'npm'
-      - name: Install Yarn
-        run: npm i -g yarn
-      - name: Install Gulp
-        run: npm i -g gulp
-      - name: Install BEM
-        run: npm i -g bem-tools-core
-      - name: Set Yarn version
-        run: yarn set version berry
       - name: Install yarn dependencies
         run: yarn
       - name: Run build task
