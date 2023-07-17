@@ -23,3 +23,24 @@ jobs:
         run: npm i -g gulp
       - name: Install BEM
         run: npm i -g bem-tools-core
+      - name: Set Yarn version
+        run: yarn set version berry
+      - name: Install yarn dependencies
+        run: yarn
+      - name: Run build task
+        run: yarn run build
+      - name: HTML5 Validator
+        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+        with:
+          root: dist/
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@main
+        env:
+            SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+            ARGS: "-rlgoDzvc -i --delete"
+            SOURCE: "dist/"
+            REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+            REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
+            REMOTE_USER: ${{ secrets.REMOTE_USER }}
+            TARGET: ${{ secrets.REMOTE_TARGET }}
+            EXCLUDE: "/node_modules/"
