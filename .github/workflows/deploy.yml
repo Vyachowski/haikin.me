@@ -7,7 +7,7 @@ on:
 jobs:
   # build – произвольно выбранное имя задания
   # их может быть больше одного
-  Build and Deploy:
+  Build-and-Deploy:
     # операционная система для работы воркфлоу
     runs-on: macos-latest
     steps:
