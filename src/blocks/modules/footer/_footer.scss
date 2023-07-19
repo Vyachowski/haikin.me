@@ -16,6 +16,10 @@
 
   &__navbar {
     border-bottom: 1px solid $border-color;
+
+    @media (min-width: $lg) {
+      border: none;
+    }
   }
 
   &__nav {
