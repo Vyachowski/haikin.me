@@ -147,17 +147,13 @@
       padding-block: 0;
       border-block: none;
     }
-  }
 
-
-  @media (max-height: 620px) {
-
-    &__nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      flex-direction: row;
-    }
+    @media (max-height: 620px) AND (max-width: ($lg - 1)) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+      }
   }
 
   &__nav-link {
