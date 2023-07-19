@@ -1,6 +1,6 @@
-const menuButton = document.querySelector(".menu-toggle");
-const pageHeaderMenu = document.querySelector(".page-header");
+const menuButton = document.querySelector(".header__toggle");
+const pageHeaderMenu = document.querySelector(".header");
 
 menuButton.addEventListener("click", () => {
-  pageHeaderMenu.classList.toggle("page-header--open");
+  pageHeaderMenu.classList.toggle("header--open");
 });
