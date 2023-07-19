@@ -72,7 +72,7 @@
     }
   }
 
-  &__field {
+  &__group {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -86,28 +86,23 @@
     letter-spacing: -0.28px;
     text-align: left;
   }
-}
 
-#index_textarea {
-  width: 100%;
-  padding: 15px 20px;
-  color: #000;
-  font: inherit;
-  font-size: 15px;
-  letter-spacing: -0.3px;
-  border-radius: 6px;
-  border: 1px solid #667080;
-  background: transparent;
-}
-
-#index_email-field {
-  width: 100%;
-  padding: 11px 20px;
-  color: #000;
-  font: inherit;
-  font-size: 15px;
-  letter-spacing: -0.3px;
-  border-radius: 6px;
-  border: 1px solid #667080;
-  background: transparent;
+  &__field {
+    width: 100%;
+    border: 1px solid #667080;
+    background: $background-color;
+    padding: 11px 20px;
+    color: #000;
+    font: inherit;
+    font-size: 15px;
+    letter-spacing: -0.3px;
+    border-radius: 6px;
+  }
+  
+  &__textarea {
+    padding: 15px 20px;
+    font-size: 15px;
+    letter-spacing: -0.3px;
+    border-radius: 6px;
+  }
 }

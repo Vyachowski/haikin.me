@@ -7,10 +7,10 @@ section.contact-form
         | I am totally open to a new job and new contacts so let’s discuss it in any 
         | convenient way. 
     form.contact-form__form(action='#' method='get' autocomplete='on') 
-      p.contact-form__field
-        label.contact-form__label(for="index_textarea") Message:
-        textarea#index_textarea(name="index_textarea", cols="15", rows="5") Hi, Slava...
-      p.contact-form__field
-        label.contact-form__label(for="index_email-field") Your email:
-        input#index_email-field(type="email", name="index_email-field" placeholder='your@mail.com')
+      p.contact-form__group
+        label.contact-form__label(for="contact-form_message") Message:
+        textarea.contact-form__field.contact-form__textarea(name="contact-form_message", cols="15", rows="5") Hi, Slava...
+      p.contact-form__group
+        label.contact-form__label(for="contact-form_email") Your email:
+        input.contact-form__field#index_email-field(type="email", name="contact-form_email" placeholder='your@mail.com')
       button.button.button--accent(type="submit") Build a bridge
