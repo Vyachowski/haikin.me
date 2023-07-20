@@ -1,7 +1,21 @@
 section.hero
   .hero__wrapper.container
     .hero__content
-      img.hero__image(src='img/hero.png' width='200' height='211' alt='Slava Haikin – Front-End Developer')
+      picture.hero__image
+        // Изображение для ширины экрана до 600px и ретина-дисплеев
+        source(srcset="img/hero-mobile-2x.webp 2x, img/hero-mobile.webp" type="image/webp" media="(max-width: 600px)")
+        source(srcset="img/hero-mobile-2x.png 2x, img/hero-mobile.png" type="image/png" media="(max-width: 600px)")
+
+        // Изображение для ширины экрана от 601px до 1200px и ретина-дисплеев
+        source(srcset="img/hero-tablet-2x.webp 2x, img/hero-tablet.webp" type="image/webp" media="(min-width: 601px) and (max-width: 1200px)")
+        source(srcset="img/hero-tablet-2x.png 2x, img/hero-tablet.png" type="image/png" media="(min-width: 601px) and (max-width: 1200px)")
+
+        // Изображение для ширины экрана более 1200px и ретина-дисплеев
+        source(srcset="img/hero-desktop-2x.webp 2x, img/hero-desktop.webp" type="image/webp" media="(min-width: 1201px)")
+        source(srcset="img/hero-desktop-2x.png 2x, img/hero-desktop.png" type="image/png" media="(min-width: 1201px)")
+
+        // Базовое изображение, которое будет отображаться, если браузер не поддерживает тег <picture>
+        img(src="img/hero-mobile.png" width="300" height="317" srcset="img/hero-mobile-2x.png 2x", alt="Slava Haikin – Front-End Developer")
       .hero__text-content
         p.subtitle.hero__subtitle Hi, my name is
         p.title.hero__title
