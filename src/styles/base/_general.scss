@@ -3,7 +3,7 @@
 :root[data-theme='light'] {
   color: $text-primary-color;
   font-family: $basic-font;
-  font-size: clamp(15px, $text-size, 20px);
+  font-size: $text-size;
   line-height: $line-height;
   background-color: $background-color;
   height: 100%;
