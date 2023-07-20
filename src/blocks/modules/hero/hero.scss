@@ -49,9 +49,19 @@
 
     @media (min-width: $xl) {
       order: 2;
-      width: 300px;
+      width: auto;
       height: auto;
       margin: 0;
+    }
+  }
+
+  &__image-content {
+    width: 200px;
+    height: auto;
+
+    @media (min-width: $xl) {
+      width: auto;
+      height: auto;
     }
   }
 
