@@ -19,6 +19,11 @@ const requireDir = require("require-dir"),
       dist: "./dist/js/",
       watch: ["./src/blocks/**/*.js", "./src/js/**/*.js"],
     },
+    php: {
+      src: "./src/php/index.js",
+      dist: "./dist/php/",
+      watch: ["./src/php/**/*.php", "./src/php/**/*.php"],
+    },
     images: {
       src: [
         "./src/img/**/*.{jpg,jpeg,png,gif,tiff,svg}",
@@ -62,6 +67,7 @@ export const development = gulp.series(
     "sprites",
     "fonts",
     "favicons",
+    "php",
   ]),
   gulp.parallel("serve")
 );
@@ -78,6 +84,7 @@ export const prod = gulp.series(
     "fonts",
     "favicons",
     "gzip",
+    "php",
   ])
 );
 

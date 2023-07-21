@@ -29,3 +29,8 @@ gulp.task("scripts", () => {
     }))
     .pipe(browsersync.stream());
 });
+
+gulp.task("php", () => {
+  return gulp.src(paths.php.src)
+    .pipe(gulp.dest(paths.php.dist));
+});
