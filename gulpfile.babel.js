@@ -20,7 +20,7 @@ const requireDir = require("require-dir"),
       watch: ["./src/blocks/**/*.js", "./src/js/**/*.js"],
     },
     php: {
-      src: "./src/php/index.js",
+      src: "./src/php/**/*.php",
       dist: "./dist/php/",
       watch: ["./src/php/**/*.php", "./src/php/**/*.php"],
     },
