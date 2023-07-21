@@ -1,42 +1,74 @@
 name: Deploy
-# on – определяет события, которые запускают воркфлоу
+
 on:
   push:
     branches:
       - main
+
 jobs:
-  # build – произвольно выбранное имя задания
-  # их может быть больше одного
   Build-and-Deploy:
-    # операционная система для работы воркфлоу
     runs-on: macos-latest
+
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js 20.2.0
-        uses: actions/setup-node@v3
+
+      # Кэширование Node.js и Yarn
+      - name: Cache Node.js and Yarn dependencies
+        uses: actions/cache@v2
         with:
-          node-version: '20.2.0'
-          cache: 'npm'
+          path: |
+            ~/.npm
+            ~/.cache/yarn
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      # Установка стабильной версии Node.js
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+          cache: 'yarn'
+
       - name: Install Yarn
         run: npm i -g yarn
+        env:
+          YARN_CACHE_FOLDER: ~/.cache/yarn
+
       - name: Install Gulp
         run: npm i -g gulp
+        env:
+          YARN_CACHE_FOLDER: ~/.cache/yarn
+
       - name: Install BEM
         run: npm i -g bem-tools-core
+        env:
+          YARN_CACHE_FOLDER: ~/.cache/yarn
+
       - name: Set Yarn version
         run: yarn set version berry
+        env:
+          YARN_CACHE_FOLDER: ~/.cache/yarn
+
+      # Установка зависимостей с помощью Yarn и кэширование результатов
       - name: Install yarn dependencies
         run: yarn
+        env:
+          YARN_CACHE_FOLDER: ~/.cache/yarn
+
       - name: Run build task
         run: yarn run build
+        env:
+          YARN_CACHE_FOLDER: ~/.cache/yarn
+
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
         env: 
-            SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-            ARGS: "-rlgoDzvc -i --delete"
-            SOURCE: "dist/"
-            REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-            REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
-            REMOTE_USER: ${{ secrets.REMOTE_USER }}
-            TARGET: ${{ secrets.REMOTE_TARGET_HAIKIN }}
-            EXCLUDE: "/node_modules/"
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: "dist/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.REMOTE_TARGET_HAIKIN }}
+          EXCLUDE: "/node_modules/"

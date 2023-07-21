@@ -3,7 +3,7 @@ import "./import/components";
 
 // Функция для выполнения запроса к PHP-скрипту
 function fetchData() {
-  fetch("http://haikin.me/database_connector.php", {
+  fetch("http://haikin.me/php/database_connector.php", {
     method: "POST", // Метод запроса
   })
     .then((response) => response.json())
