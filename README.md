@@ -1,1 +1,0 @@
-# Vyachowski.com – Personal web site
