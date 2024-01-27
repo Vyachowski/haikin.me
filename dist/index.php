@@ -1,8 +1,19 @@
 <?php
 $title = 'From Programmer to Software Engineer';
 $name = 'Slava Haikin';
+$description = 'Personal blog of a software developer that creates a fast and easy-to-maintain solutions for businesses.';
+?>
 
-require('components/head.php');
-require('components/menu.php');
-require('components/previews.php');
-require('components/footer.php');
+<!DOCTYPE html>
+<html lang="en">
+  <?php require('components/head.php'); ?>
+  <body class="page">
+  <?php require('components/header.php'); ?>
+  <?php require('components/navigation.php'); ?>
+  <main>
+    <?php require('components/previews.php'); ?>
+  </main>
+    <?php require('components/footer.php'); ?>
+    <?php require('components/scripts.php'); ?>
+  </body>
+</html>

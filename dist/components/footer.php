@@ -1,4 +1,3 @@
-</main>
 <footer>
   <menu class="footer-list">
     <li class="footer-item">
