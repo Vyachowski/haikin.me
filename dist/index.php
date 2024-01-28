@@ -9,7 +9,6 @@ $description = 'Personal blog of a software developer that creates a fast and ea
   <?php require('components/head.php'); ?>
   <body class="page">
   <?php require('components/header.php'); ?>
-  <?php require('components/navigation.php'); ?>
   <main>
     <?php require('components/previews.php'); ?>
   </main>
