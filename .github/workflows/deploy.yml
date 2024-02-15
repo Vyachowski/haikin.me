@@ -17,9 +17,13 @@ jobs:
         with:
           node-version: '20.2.0'
           cache: 'npm'
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
-        env: 
+        env:
             SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
             ARGS: "-rlgoDzvc -i --delete"
             SOURCE: "dist/"
