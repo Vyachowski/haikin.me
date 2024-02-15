@@ -9,7 +9,7 @@ jobs:
   # их может быть больше одного
   Build-and-Deploy:
     # операционная система для работы воркфлоу
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js 20.2.0
@@ -17,10 +17,6 @@ jobs:
         with:
           node-version: '20.2.0'
           cache: 'npm'
-      - name: Install Dependencies
-        run: npm install
-      - name: Build distro
-        run: npm run build
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
         env:
