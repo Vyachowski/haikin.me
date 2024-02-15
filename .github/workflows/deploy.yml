@@ -9,22 +9,26 @@ jobs:
   # их может быть больше одного
   Build-and-Deploy:
     # операционная система для работы воркфлоу
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js 20.2.0
         uses: actions/setup-node@v3
         with:
-          node-version: '20.2.0'
+          node-version: '21.1.0'
           cache: 'npm'
+      - name: Install Dependencies
+        run: npm install
+      - name: Build distro
+        run: npm run build
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
         env:
-            SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-            ARGS: "-rlgoDzvc -i --delete"
-            SOURCE: "dist/"
-            REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-            REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
-            REMOTE_USER: ${{ secrets.REMOTE_USER }}
-            TARGET: ${{ secrets.REMOTE_TARGET_HAIKIN }}
-            EXCLUDE: "/node_modules/"
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: "dist/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.REMOTE_TARGET_HAIKIN }}
+          EXCLUDE: "/node_modules/"
