@@ -15,7 +15,7 @@ jobs:
       - name: Use Node.js 20.2.0
         uses: actions/setup-node@v3
         with:
-          node-version: '20.2.0'
+          node-version: '21.1.0'
           cache: 'npm'
       - name: Install Dependencies
         run: npm install
