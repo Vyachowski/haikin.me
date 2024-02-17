@@ -539,12 +539,12 @@ body{
   background-blend-mode:multiply,normal
 }
 .key-projects__image-wrapper--first{
-  background:linear-gradient(0deg,rgba(221,221,221,.9) 0,rgba(221,221,221,.9) 100%),url(../images/key-project-1.png),-49.831px -.043px/124.772% 128.51% no-repeat #d3d3d3;
+  background:linear-gradient(0deg,rgba(221,221,221,.9) 0,rgba(221,221,221,.9) 100%),url(../img/key-project-1.png),-49.831px -.043px/124.772% 128.51% no-repeat #d3d3d3;
   background-position:top center;
   background-size:cover
 }
 .key-projects__image-wrapper--second{
-  background:linear-gradient(0deg,rgba(221,221,221,.9) 0,rgba(221,221,221,.9) 100%),url(../images/key-project-2.png),-49.831px -.043px/124.772% 128.51% no-repeat #d3d3d3;
+  background:linear-gradient(0deg,rgba(221,221,221,.9) 0,rgba(221,221,221,.9) 100%),url(../img/key-project-2.png),-49.831px -.043px/124.772% 128.51% no-repeat #d3d3d3;
   background-position:top center;
   background-size:cover
 }
@@ -871,7 +871,7 @@ body{
     min-height:700px;
     padding-top:20px;
     padding-bottom:20px;
-    background-image:url(../images/hero-background.svg);
+    background-image:url(../img/hero-background.svg);
     background-position:right center;
     background-repeat:no-repeat;
     background-size:contain
@@ -964,7 +964,7 @@ body{
     height:100%;
     width:40%;
     opacity:.5;
-    background-image:url(../images/hero-background.svg);
+    background-image:url(../img/hero-background.svg);
     background-repeat:no-repeat;
     background-position:right center;
     background-size:cover;

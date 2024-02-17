@@ -8,22 +8,22 @@
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=5.0 minimum-scale=1.0">
-    <link rel="shortcut icon" href="images/favicons/favicon.ico" type="image/x-icon">
-    <link rel="icon" sizes="16x16" href="images/favicons/favicon-16x16.png" type="image/png">
-    <link rel="icon" sizes="32x32" href="images/favicons/favicon-32x32.png" type="image/png">
-    <link rel="apple-touch-icon-precomposed" href="images/favicons/apple-touch-icon-precomposed.png">
-    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="images/favicons/apple-touch-icon-167x167.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon-180x180.png">
-    <link rel="apple-touch-icon" sizes="1024x1024" href="images/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
     <link rel="stylesheet" href="<?php echo esc_url( get_stylesheet_uri() ); ?>">
     <?php wp_head(); ?>
   </head>
@@ -81,15 +81,15 @@
           <div class="hero__content">
             <picture class="hero__image">
               <!-- Изображение для ширины экрана до 600px и ретина-дисплеев-->
-              <source srcset="images/hero-mobile-2x.webp 2x, images/hero-mobile.webp" type="image/webp" media="(max-width: 600px)">
-              <source srcset="images/hero-mobile-2x.png 2x, images/hero-mobile.png" type="image/png" media="(max-width: 600px)">
+              <source srcset="img/hero-mobile-2x.webp 2x, img/hero-mobile.webp" type="image/webp" media="(max-width: 600px)">
+              <source srcset="img/hero-mobile-2x.png 2x, img/hero-mobile.png" type="image/png" media="(max-width: 600px)">
               <!-- Изображение для ширины экрана от 601px до 1200px и ретина-дисплеев-->
-              <source srcset="images/hero-tablet-2x.webp 2x, images/hero-tablet.webp" type="image/webp" media="(min-width: 601px) and (max-width: 1200px)">
-              <source srcset="images/hero-tablet-2x.png 2x, images/hero-tablet.png" type="image/png" media="(min-width: 601px) and (max-width: 1200px)">
+              <source srcset="img/hero-tablet-2x.webp 2x, img/hero-tablet.webp" type="image/webp" media="(min-width: 601px) and (max-width: 1200px)">
+              <source srcset="img/hero-tablet-2x.png 2x, img/hero-tablet.png" type="image/png" media="(min-width: 601px) and (max-width: 1200px)">
               <!-- Изображение для ширины экрана более 1200px и ретина-дисплеев-->
-              <source srcset="images/hero-desktop-2x.webp 2x, images/hero-desktop.webp" type="image/webp" media="(min-width: 1201px)">
-              <source srcset="images/hero-desktop-2x.png 2x, images/hero-desktop.png" type="image/png" media="(min-width: 1201px)">
-              <!-- Базовое изображение, которое будет отображаться, если браузер не поддерживает тег <picture>--><img src="images/hero-mobile.png" width="200" height="211" srcset="images/hero-mobile-2x.png 2x" alt="Slava Haikin – Front-End Developer">
+              <source srcset="img/hero-desktop-2x.webp 2x, img/hero-desktop.webp" type="image/webp" media="(min-width: 1201px)">
+              <source srcset="img/hero-desktop-2x.png 2x, img/hero-desktop.png" type="image/png" media="(min-width: 1201px)">
+              <!-- Базовое изображение, которое будет отображаться, если браузер не поддерживает тег <picture>--><img src="img/hero-mobile.png" width="200" height="211" srcset="img/hero-mobile-2x.png 2x" alt="Slava Haikin – Front-End Developer">
             </picture>
             <div class="hero__text-content">
               <p class="subtitle hero__subtitle">Hi, my name is</p>
