@@ -37,7 +37,7 @@
       <nav class="header__navbar">
         <ul class="header__nav list">
           <li class="header__nav-item"><a class="header__nav-link header__nav-link--active" href="#">About</a></li>
-          <li class="header__nav-item"><a class="header__nav-link" href="blog.html">Blog</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="blog.php">Blog</a></li>
         </ul>
         <div class="header__divider"></div>
         <ul class="header__socials list list--horizontal">
@@ -315,12 +315,8 @@
       <div class="footer__wrapper">
         <nav class="footer__navbar">
           <ul class="footer__nav-list list list--horizontal">
-            <li class="footer__nav-item"><a class="footer__nav-link footer__nav-link--active" href="about.html">About</a></li>
-            <li class="footer__nav-item"><a class="footer__nav-link" href="services.html">Services</a></li>
-            <li class="footer__nav-item"><a class="footer__nav-link" href="projects.html">Projects</a></li>
-            <li class="footer__nav-item"><a class="footer__nav-link" href="contacts.html">Contacts</a></li>
-            <li class="footer__nav-item"><a class="footer__nav-link" href="today-i-learned.html">TIL</a></li>
-            <li class="footer__nav-item"><a class="footer__nav-link" href="blog.html">Blog</a></li>
+            <li class="footer__nav-item"><a class="footer__nav-link footer__nav-link--active" href="#">About</a></li>
+            <li class="footer__nav-item"><a class="footer__nav-link" href="blog.php">Blog</a></li>
           </ul>
         </nav>
         <p class="footer__author">Built by Slava Haikin</p>
