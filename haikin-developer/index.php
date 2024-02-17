@@ -9,21 +9,21 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=5.0 minimum-scale=1.0">
     <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
-    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
-    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
-    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
-    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
-    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="icon" sizes="16x16" href="https://haikin.me/wp-content/uploads/2024/02/favicon-16x16-1.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="https://haikin.me/wp-content/uploads/2024/02/favicon-32x32-1.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="https://haikin.me/wp-content/uploads/2024/02/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="https://haikin.me/wp-content/uploads/2024/02/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://haikin.me/wp-content/uploads/2024/02/apple-touch-icon-57x57-1.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://haikin.me/wp-content/uploads/2024/02/apple-touch-icon-60x60-1.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://haikin.me/wp-content/uploads/2024/02/apple-touch-icon-72x72-1.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://haikin.me/wp-content/uploads/2024/02/apple-touch-icon-76x76-1.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://haikin.me/wp-content/uploads/2024/02/apple-touch-icon-114x114-1.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://haikin.me/wp-content/uploads/2024/02/apple-touch-icon-120x120-1.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://haikin.me/wp-content/uploads/2024/02/apple-touch-icon-144x144-1.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://haikin.me/wp-content/uploads/2024/02/apple-touch-icon-152x152-1.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="https://haikin.me/wp-content/uploads/2024/02/apple-touch-icon-167x167-1.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://haikin.me/wp-content/uploads/2024/02/apple-touch-icon-180x180-1.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="https://haikin.me/wp-content/uploads/2024/02/apple-touch-icon-1024x1024-1.png">
     <link rel="stylesheet" href="<?php echo esc_url( get_stylesheet_uri() ); ?>">
     <?php wp_head(); ?>
   </head>
@@ -89,7 +89,8 @@
               <!-- Изображение для ширины экрана более 1200px и ретина-дисплеев-->
               <source srcset="img/hero-desktop-2x.webp 2x, img/hero-desktop.webp" type="image/webp" media="(min-width: 1201px)">
               <source srcset="img/hero-desktop-2x.png 2x, img/hero-desktop.png" type="image/png" media="(min-width: 1201px)">
-              <!-- Базовое изображение, которое будет отображаться, если браузер не поддерживает тег <picture>--><img src="img/hero-mobile.png" width="200" height="211" srcset="img/hero-mobile-2x.png 2x" alt="Slava Haikin – Front-End Developer">
+              <!-- Базовое изображение, которое будет отображаться, если браузер не поддерживает тег <picture>-->
+                <img src="img/hero-mobile.png" width="200" height="211" srcset="img/hero-mobile-2x.png 2x" alt="Slava Haikin – Front-End Developer">
             </picture>
             <div class="hero__text-content">
               <p class="subtitle hero__subtitle">Hi, my name is</p>
@@ -100,7 +101,9 @@
                 My focus is in understanding business purposes and provide a decisions
                 that can hugely increase them
               </p>
-              <div class="hero__button-wrapper"> <a class="button button--accent" href="#">Hire </a><a class="button button--secondary" href="resume.html">Resume</a></div>
+              <div class="hero__button-wrapper">
+                  <a class="button button--accent" href="#">Hire </a>
+                  <a class="button button--secondary" href="resume.html">Resume</a></div>
             </div>
           </div>
           <div class="hero__techstack">
