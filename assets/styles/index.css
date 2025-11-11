@@ -177,6 +177,7 @@
 /* About section*/
 .about {
   padding-block: 60px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .about__social-list-wrapper {
@@ -347,5 +348,54 @@
 @media (width >=1280px) {
   .tech-stack__list {
     justify-content: start;
+  }
+}
+
+/* Projects section */
+
+.projects {
+  padding-block: 60px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.projects__lead {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.projects__title {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.projects__item:first-of-type {
+  grid-column: span 2;
+}
+
+@media (width >= 768px) {
+  .projects__item:first-of-type {
+    grid-column: span 4;
+  }
+}
+
+@media (width >= 1280px ) {
+  .projects__item:first-of-type {
+    grid-column: 1 / -1;
+  }
+}
+
+.projects__item:last-of-type {
+  grid-column: span 2;
+}
+
+@media (width >= 768px) {
+  .projects__item:last-of-type {
+    grid-column: 5 / -1;
+  }
+}
+
+@media (width >= 1280px) {
+  .projects__item:last-of-type {
+    grid-column: 1 / -1;
   }
 }

@@ -43,14 +43,18 @@
 
 @layer base {
   :root {
+    /* fonts */
     --font-fallback: BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
         "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-sans;
+    --font-text: 'Roboto Mono';
+    --font-accent: 'Inter';
+    /* colors */
     --background-color: #FFFFFF;
     --text-color: #000000;
     --alt-text-color: #667080;
     --accent-color: #2673E8;
     --border-color: #E5E5E6;
-
+    /* indexex */
     --popup-index: 10;
     --menu-index: 50;
     --modal-index: 100;
@@ -90,7 +94,7 @@
     min-height: 100vh;
     margin: 0;
 
-    font-family: 'Roboto Mono', var(--font-fallback);
+    font-family: var(--font-main), var(--font-fallback);
     line-height: 1.5;
     letter-spacing: -0.02em;
     font-feature-settings: 'calt' off;
@@ -213,7 +217,7 @@ a:active {
   border: none;
   border-radius: 0.375em;
 
-  font-family: 'Inter', var(--font-fallback);
+  font-family: var(--font-accent), var(--font-fallback);
   font-weight: 700;
   line-height: 1.375;
   color: inherit;
