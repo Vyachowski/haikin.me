@@ -495,3 +495,7 @@
   line-height: 1.2;
   color: var(--accent-color);
 }
+
+.project__social-link {
+  display: block;
+}
