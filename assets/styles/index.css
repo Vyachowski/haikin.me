@@ -688,6 +688,7 @@
 .footer__nav-link {
   display: block;
   padding: 1rem;
+  text-align: center;
 }
 
 .footer__copyright {
