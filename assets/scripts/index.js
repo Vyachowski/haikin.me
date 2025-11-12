@@ -10,6 +10,18 @@ const queryElement = (document, identifier) => {
   return el;
 }
 
+const queryAllElements = (document, identifier) => {
+  const elements = document.querySelectorAll(identifier);
+
+  if (elements.length === 0) {
+    console.error(`${identifier} was not found.`);
+
+    return null;
+  }
+
+  return Array.from(elements);
+}
+
 const toggleBodyBlock = (bodyEl) => {
   bodyEl.classList.toggle('header-menu-open');
 }
@@ -36,12 +48,23 @@ const addResizeObserver = (window, document, bodyEl) => {
   })
 }
 
+const addHeaderMenuLinksListener = (document, bodyEl) => {
+  const linksElements = queryAllElements(document, '.header__nav-link');
+
+  linksElements.forEach(link => {
+    link.addEventListener('click', () => {
+      bodyEl.classList.remove('header-menu-open');
+    })
+  })
+}
+
 const app = () => {
   const bodyEl = queryElement(document, 'body');
   const menuButtonEl = queryElement(document, '.header__menu-toggle');
 
   addToggleMenuListener(menuButtonEl, bodyEl);
   addResizeObserver(window, document, bodyEl);
+  addHeaderMenuLinksListener(document, bodyEl);
 }
 
 app();
