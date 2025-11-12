@@ -315,41 +315,44 @@
       </section>
 
       <section class="contacts">
-        <div class="container">
+        <div class="container contacts__container">
           <div class="contacts__text">
             <p class="lead">Contacts</p>
-            <h2>Keep in touch</h2>
-            <p>I am totally open to a new job and new contacts so let’s discuss it in any convenient way.</p>
+            <h2 class="contacts__title">Keep in touch</h2>
+            <p>I am open to a new job and new contacts so let’s discuss it in any convenient way.</p>
           </div>
-        </div>
-        <form action="/mail.php" autocomplete="on">
-          <label>
-            <span>Message:</span>
-            <textarea name="message" placeholder="Hi, Slava. I would like to..." autocapitalize="on"></textarea>
-          </label>
-          <label>
-            <span>Your email:</span>
-            <input type="email" name="email" placeholder="email@domain.com">
-          </label>
 
-          <button class="btn btn--primary" type="submit">Build a bridge</button>
-        </form>
+          <form class="contacts__form contacts-form" action="/mail.php" autocomplete="on">
+            <label class="contacts-form__label">
+              <span class="contacts-form__label-text">Message:</span>
+              <textarea class="contacts-form__textarea" name="message" placeholder="Hi, Slava. I would like to..." autocapitalize="on" ></textarea>
+            </label>
+            <label class="contacts-form__label">
+              <span class="contacts-form__label-text">Your email:</span>
+              <input class="contacts-form__input" type="email" name="email" placeholder="email@domain.com">
+            </label>
+
+            <button class="btn btn--primary contacts-form__button" type="submit">Build a bridge</button>
+          </form>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
-      <ul class="footer__nav-list">
-        <li class="footer__nav-link-item">
-          <a class="footer__nav-link" href="#about">About</a>
-        </li>
-        <li class="footer__nav-link-item">
-          <a class="footer__nav-link" href="#projects">Projects</a>
-        </li>
-        <li class="footer__nav-link-item">
-          <a class="footer__nav-link" href="#contacts">Contacts</a>
-        </li>
-      </ul>
-      <p>Built by Slava Haikin</p>
+      <div class="container">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-link-item">
+            <a class="footer__nav-link" href="#about">About</a>
+          </li>
+          <li class="footer__nav-link-item">
+            <a class="footer__nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="footer__nav-link-item">
+            <a class="footer__nav-link" href="#contacts">Contacts</a>
+          </li>
+        </ul>
+        <p>Built by Slava Haikin</p>
+      </div>
     </footer>
 
     <script src="assets/scripts/index.js" defer></script>

@@ -277,3 +277,10 @@ a:active {
 .logo {
   display: block;
 }
+
+/* Lead text */
+.lead {
+  font-size: 1.8rem;
+  line-height: 1.22;
+  color: var(--alt-text-color);
+}
