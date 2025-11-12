@@ -577,12 +577,6 @@
   }
 }
 
-@media (width >= 1280px) {
-  .contacts-form__label {
-
-  }
-}
-
 .contacts-form__label-text {
   font-size: 1.4rem;
   line-height: 1.57;
