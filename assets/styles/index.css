@@ -448,5 +448,10 @@
   padding: 0.25em 0.75em;
   border: 1px solid var(--accent-color);
   border-radius: 0.25em;
+
+  font-family: var(--font-accent);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.2;
   color: var(--accent-color);
 }
