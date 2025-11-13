@@ -554,6 +554,11 @@
   align-items: start;
 }
 
+.contacts__form:has(:invalid) button[type="submit"] {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 @media (width >= 768px) {
   .contacts__form {
     grid-column: 5 / -1;
