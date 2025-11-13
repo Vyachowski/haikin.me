@@ -210,6 +210,11 @@
   list-style-type: none;
 }
 
+.about__social-link svg {
+  stroke: var(--alt-text-color);
+  fill: var(--background-color);
+}
+
 .about__picture-wrapper {
   grid-column: 1 / -1;
   justify-self: center;
@@ -263,7 +268,7 @@
   display: block;
   margin-bottom: 2rem;
 
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.375;
   font-weight: 400;
   color: var(--alt-text-color);
@@ -321,6 +326,10 @@
   }
 }
 
+.about__button-group button:first-child {
+  color: var(--background-color);
+}
+
 .about__misc {
   grid-column: 1 / -1;
 }
@@ -356,6 +365,12 @@
   .tech-stack__list {
     justify-content: start;
   }
+}
+
+.tech-stack__description:hover svg {
+  fill: var(--text-color);
+  transform: scale(1.2);
+  transition: fill 500ms ease, transform 500ms ease;
 }
 
 /* Projects section */
@@ -504,6 +519,22 @@
 
 .project__social-link {
   display: block;
+}
+
+.project__social-link svg {
+  fill: var(--background-color);
+}
+
+@media (prefers-color-scheme: light) {
+  .project__social-link svg {
+    stroke: var(--alt-text-color);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .project__social-link svg {
+    stroke: #B9BBC2;
+  }
 }
 
 /* Contacts */
