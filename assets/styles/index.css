@@ -326,10 +326,6 @@
   }
 }
 
-.about__button-group button:first-child {
-  color: var(--background-color);
-}
-
 .about__misc {
   grid-column: 1 / -1;
 }
