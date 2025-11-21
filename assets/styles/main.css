@@ -49,18 +49,20 @@
 
 @layer base {
   :root {
-    /* fonts */
+    /* Fonts */
     --font-fallback: BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
         "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-sans;
-    --font-text: 'Roboto Mono';
-    --font-accent: 'Inter';
-    /* colors */
-    --background-color: #FFFFFF;
+    --font-text: "Roboto Mono";
+    --font-accent: "Inter";
+
+    /* Palette */
+    --clr-white: #FFFFFF;
     --text-color: #000000;
     --alt-text-color: #667080;
     --accent-color: #2673E8;
     --border-color: #E5E5E6;
-    /* indexes */
+
+    /* Layers */
     --popup-index: 10;
     --menu-index: 50;
     --modal-index: 100;
@@ -68,7 +70,7 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --background-color: #161b22;
+      --clr-white: #161b22;
       --text-color: #FFFFFF;
       --border-color: #2E343B;
     }
@@ -158,7 +160,7 @@
 }
 
 .page {
-  background-color: var(--background-color);
+  background-color: var(--clr-white);
 }
 
 .header-menu-open {
@@ -237,14 +239,13 @@ a:active {
 }
 
 .btn--primary {
-  color: var(--background-color);
+  color: #ffffff;
   background-color: var(--accent-color);
   box-shadow: 4px 4px 10px rgb(5 93 235 / 0.3);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .btn--primary:hover {
-    color: var(--background-color);
     box-shadow: 4px 4px 10px rgb(5 93 235 / 0.8);
     transition: background-color 200ms ease, box-shadow 200ms ease;
   }
