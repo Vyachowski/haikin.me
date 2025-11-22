@@ -56,11 +56,20 @@
     --font-accent: "Inter";
 
     /* Palette */
-    --clr-background: #FFFFFF;
-    --text-color: #000000;
-    --alt-text-color: #667080;
-    --accent-color: #2673E8;
-    --border-color: #E5E5E6;
+    --clr-white: #FFFFFF;
+    --clr-light-black: #161b22;
+    --clr-black: #000000;
+    --clr-grey: #667080;
+    --clr-light-grey: #E5E5E6;
+    --clr-dark-grey: #2E343B;
+    --clr-blue: #2673E8;
+
+    /* Light theme */
+    --clr-background: var(--clr-white);
+    --clr-text: var(--clr-black);
+    --clr-label: var(--clr-grey);
+    --clr-accent: var(--clr-blue);
+    --clr-decoration: var(--clr-light-grey);
 
     /* Layers */
     --popup-index: 10;
@@ -70,9 +79,9 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --clr-background: #161b22;
-      --text-color: #FFFFFF;
-      --border-color: #2E343B;
+      --clr-background: var(--clr-light-black);
+      --clr-text: var(--clr-white);
+      --clr-decoration: var(--clr-dark-grey);
     }
   }
 
@@ -107,7 +116,7 @@
     letter-spacing: -0.02em;
     font-feature-settings: 'calt' off;
 
-    color: var(--text-color);
+    color: var(--clr-text);
   }
 
   @supports (max-height: 100dvh) {
@@ -203,13 +212,13 @@ a {
 
 @media (hover: hover) and (pointer: fine) {
   a:hover {
-    color: var(--text-color);
+    color: var(--clr-text);
     transition: color 200ms ease;
   }
 }
 
 a:active {
-  color: var(--text-color);
+  color: var(--clr-text);
   transition: color 200ms ease;
 }
 
@@ -266,13 +275,13 @@ a:active {
 
 @media (hover: hover) and (pointer: fine) {
   .btn--secondary:hover {
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--clr-text);
     transition: border 200ms ease, transform 200ms ease;
   }
 }
 
 .btn--secondary:active {
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--clr-text);
   transform: scale(0.95);
   transition: transform 200ms ease;
 }

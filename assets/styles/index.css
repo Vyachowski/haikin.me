@@ -6,7 +6,7 @@
   width: 100%;
   height: 8rem;
 
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--clr-decoration);
 }
 
 .header-menu-open .header {
@@ -27,7 +27,7 @@
 
   width: 120%;
   height: 1px;
-  background-color: 1px solid var(--border-color);
+  background-color: 1px solid var(--clr-decoration);
   content: '';
 }
 
@@ -78,7 +78,7 @@
   align-content: center;
 
   padding-block: 2rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--clr-decoration);
   background-color: var(--clr-background);
 }
 
@@ -177,7 +177,7 @@
 /* About section*/
 .about {
   padding-block: 6rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--clr-decoration);
 }
 
 .about__social-list-wrapper {
@@ -275,7 +275,7 @@
 }
 
 .about__title span:nth-child(2) {
-  color: var(--text-color);
+  color: var(--clr-text);
 }
 
 .about__title :not(:first-child) {
@@ -364,7 +364,7 @@
 }
 
 .tech-stack__description:hover svg {
-  fill: var(--text-color);
+  fill: var(--clr-text);
   transform: scale(1.2);
   transition: fill 500ms ease, transform 500ms ease;
 }
@@ -373,7 +373,7 @@
 
 .projects {
   padding-block: 6rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--clr-decoration);
 }
 
 .projects__lead {
@@ -536,7 +536,7 @@
 /* Contacts */
 .contacts {
   padding-block: 6rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--clr-decoration);
 }
 
 .contacts__container {
@@ -635,7 +635,7 @@
   padding: 1em  1.3em;
 
   font-size: 1.5rem;
-  color: var(--text-color);
+  color: var(--clr-text);
   background: var(--clr-background);
 
   border: 1px solid var(--alt-text-color);
@@ -707,7 +707,7 @@
   bottom: 0;
   left: -10rem;
   width: 128rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--clr-decoration);
   content: '';
 }
 
