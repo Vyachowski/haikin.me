@@ -56,7 +56,7 @@
     --font-accent: "Inter";
 
     /* Palette */
-    --clr-white: #FFFFFF;
+    --clr-background: #FFFFFF;
     --text-color: #000000;
     --alt-text-color: #667080;
     --accent-color: #2673E8;
@@ -70,7 +70,7 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --clr-white: #161b22;
+      --clr-background: #161b22;
       --text-color: #FFFFFF;
       --border-color: #2E343B;
     }
@@ -160,7 +160,7 @@
 }
 
 .page {
-  background-color: var(--clr-white);
+  background-color: var(--clr-background);
 }
 
 .header-menu-open {
