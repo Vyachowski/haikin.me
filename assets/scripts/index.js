@@ -1,70 +1,72 @@
-const queryElement = (document, identifier) => {
-  const el = document.querySelector(identifier);
+const queryElement = (selector) => {
+  const el = document.querySelector(selector);
 
   if (!(el instanceof HTMLElement)) {
-    console.error(`${identifier} was not found.`);
-
+    console.error(`${selector} was not found.`);
     return null;
   }
 
   return el;
-}
+};
 
-const queryAllElements = (document, identifier) => {
-  const elements = document.querySelectorAll(identifier);
+const queryAllElements = (selector) => {
+  const elements = document.querySelectorAll(selector);
 
-  if (elements.length === 0) {
-    console.error(`${identifier} was not found.`);
-
+  if (!elements.length) {
+    console.error(`${selector} was not found.`);
     return null;
   }
 
   return Array.from(elements);
-}
+};
 
-const toggleBodyBlock = (bodyEl) => {
-  bodyEl.classList.toggle('header-menu-open');
-}
+const toggleBodyMenuState = () => {
+  document.body.classList.toggle('header-menu-open');
+};
 
-const addToggleMenuListener = (menuButtonEl, bodyEl) => {
-  menuButtonEl.addEventListener('click', () => {
-    toggleBodyBlock(bodyEl);
-  })
-}
+const addToggleMenuListener = (menuButtonEl) => {
+  menuButtonEl.addEventListener('click', toggleBodyMenuState);
+};
 
-const setScrollbarWidthVariable = (window, document) => {
+const setScrollbarWidthVariable = () => {
   const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 
   document.body.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
-}
+};
 
-const addResizeObserver = (window, document, bodyEl) => {
-  window.addEventListener('resize', () => {
-    setScrollbarWidthVariable(window, document);
+const handleResize = () => {
+  const tabletWidth = 768;
+  setScrollbarWidthVariable();
 
-    if (window.innerWidth >= 768) {
-      bodyEl.classList.contains('header-menu-open') && toggleBodyBlock(bodyEl);
-    };
-  })
-}
+  if (window.innerWidth >= tabletWidth) {
+    document.body.classList.remove('header-menu-open');
+  }
+};
 
-const addHeaderMenuLinksListener = (document, bodyEl) => {
-  const linksElements = queryAllElements(document, '.header__nav-link');
+const addResizeObserver = () => {
+  window.addEventListener('resize', handleResize);
+};
 
-  linksElements.forEach(link => {
+const addHeaderMenuLinksListener = () => {
+  const links = queryAllElements('.header__nav-link');
+  if (!links) return;
+
+  links.forEach((link) => {
     link.addEventListener('click', () => {
-      bodyEl.classList.remove('header-menu-open');
-    })
-  })
-}
+      document.body.classList.remove('header-menu-open');
+    });
+  });
+};
 
 const app = () => {
-  const bodyEl = queryElement(document, 'body');
-  const menuButtonEl = queryElement(document, '.header__menu-toggle');
+  const menuButtonEl = queryElement('.header__menu-toggle');
+  if (!menuButtonEl) return;
 
-  addToggleMenuListener(menuButtonEl, bodyEl);
-  addResizeObserver(window, document, bodyEl);
-  addHeaderMenuLinksListener(document, bodyEl);
-}
+  setScrollbarWidthVariable();
+
+  addToggleMenuListener(menuButtonEl);
+  addResizeObserver();
+  addHeaderMenuLinksListener();
+};
 
 app();
