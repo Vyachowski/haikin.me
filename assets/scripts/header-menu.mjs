@@ -67,6 +67,4 @@ class HeaderMenu {
   }
 }
 
-const app = new HeaderMenu();
-
-app.init();
+export default HeaderMenu;
