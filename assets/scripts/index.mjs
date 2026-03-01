@@ -15,6 +15,7 @@ class App {
   init() {
     this.initSnippets();
     this.handleOverlay();
+    this.showEasterEgg();
   }
 
   initSnippets() {
@@ -71,6 +72,63 @@ class App {
         <button onclick="location.reload()">Reload</button>
       </div>
     `;
+  }
+
+  showEasterEgg() {
+    const easterEggText = `
+    ╔═══════════════════════════════════════════════════════════════════╗
+    ║                                                                   ║
+    ║    ██████╗ ██╗██████╗     ██████╗ ██╗████████╗██╗   ██╗           ║
+    ║   ██╔════╝ ██║██╔══██╗   ██╔════╝ ██║╚══██╔══╝╚██╗ ██╔╝           ║
+    ║   ██║      ██║██████╔╝   ██║      ██║   ██║    ╚████╔╝            ║
+    ║   ██║      ██║██╔══██╗   ██║      ██║   ██║     ╚██╔╝             ║
+    ║   ╚██████╗ ██║██║  ██║   ╚██████╗ ██║   ██║      ██║              ║
+    ║    ╚═════╝ ╚═╝╚═╝  ╚═╝    ╚═════╝ ╚═╝   ╚═╝      ╚═╝              ║
+    ║                                                                   ║
+    ╠═══════════════════════════════════════════════════════════════════╣
+    ║                                                                   ║
+    ║   S.P.E.C.I.A.L: 10 10 10 10 10 10 10   LEVEL: 1                  ║
+    ║   KARMA: 999   REPUTATION: CHOSEN ONE OF THE WASTES               ║
+    ║                                                                   ║
+    ╠═══════════════════════════════════════════════════════════════════╣
+    ║                                                                   ║
+    ║   Sulik: "You readin' the source code?"                           ║
+    ║           "Sulik not sure that wise."                             ║
+    ║           "Sulik seen men go mad for less."                       ║
+    ║           "Maybe go save Arroyo instead, yes?"                    ║
+    ║                                                                   ║
+    ║   [✓ Keep reading]   [✗ Close DevTools]   [? Barter for bugs]     ║
+    ║                                                                   ║
+    ╠═══════════════════════════════════════════════════════════════════╣
+    ║                                                                   ║
+    ║  >> You attempt to inspect the source code.                       ║
+    ║  >> You find... HTML. Just HTML.                                  ║
+    ║  >> You gain 0 XP.                                                ║
+    ║  >> Your karma is unaffected.                                     ║
+    ║  >> You are mildly disappointed.                                  ║
+    ║                                                                   ║
+    ║  ITEM FOUND: [Code Comment] x1  — worn, but functional.           ║
+    ║                                                                   ║
+    ╠═══════════════════════════════════════════════════════════════════╣
+    ║                                                                   ║
+    ║   Myron: "I once tried to read someone's source code.             ║
+    ║            Built a dependency that did nothing.                   ║
+    ║            Called it Jet. Made a fortune."                        ║
+    ║                                                                   ║
+    ╠═══════════════════════════════════════════════════════════════════╣
+    ║                                                                   ║
+    ║   ⚠  NOTICE FROM THE OVERSEER OF VAULT 13:                        ║
+    ║      Unauthorized reading of HTML comments is punishable          ║
+    ║      by immediate dispatch to Navarro. Alone. No armor.           ║
+    ║                                                                   ║
+    ╚═══════════════════════════════════════════════════════════════════╝
+
+       ~ NUKA-COLA QUANTUM — now available in your source code ~
+
+       © 2241 Enclave Industries. All rights reserved by nuclear force.
+    `;
+
+    console.log(easterEggText);
   }
 }
 
