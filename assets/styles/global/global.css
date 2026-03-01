@@ -325,4 +325,28 @@
     line-height: 1.22;
     color: var(--clr-label);
   }
+
+  .loader-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: var(--modal-index);
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-background);
+  }
+
+  .loader-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10rem;
+    font-size: 5rem;
+
+    background-color: var(--clr-bg);
+    color: var(--clr-accent);
+  }
 }

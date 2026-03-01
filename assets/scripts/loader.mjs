@@ -1,4 +1,4 @@
-class Loader {
+export default class Loader {
   constructor() {
     this.loader = null;
   }
@@ -8,6 +8,7 @@ class Loader {
       this.loader = this.createLoader();
 
       document.body.appendChild(this.loader);
+      console.log('Loader shown', document.body);
     }
   }
 
@@ -39,6 +40,7 @@ class Loader {
 
     const loaderEl = document.createElement('div');
     loaderEl.classList.add('loader-content');
+    loaderEl.textContent = 'SH';
 
     overlayEl.appendChild(loaderEl);
     return overlayEl;

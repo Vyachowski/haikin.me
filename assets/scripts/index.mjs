@@ -2,7 +2,8 @@ import HeaderMenu from './header-menu.mjs';
 import Loader from './loader.mjs';
 
 class App {
-  constructor(snippets) {
+  constructor(loader, snippets) {
+    this.loader = loader;
     this.snippets = [];
 
     snippets.forEach((Snippet) => { this.snippets.push(new Snippet()) });
@@ -27,7 +28,7 @@ class App {
   }
 
   checkBrowserCompatibilityForLoader() {
-    const isColdStart = localStorage.getItem('first-load') === 'true';
+    const isColdStart = !(localStorage.getItem('visited') === 'true');
     const isLikelyHuman = this.isLikelyHuman();
 
     return isColdStart && isLikelyHuman;
