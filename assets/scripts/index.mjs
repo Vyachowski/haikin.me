@@ -1,3 +1,5 @@
+import HeaderMenu from './header-menu.mjs'
+
 class App {
   #FADE_DURATION = 300;
   #ERROR_TIMEOUT = 5000;
@@ -29,9 +31,13 @@ class App {
 
     const readyStates = ['complete', 'interactive'];
     if (readyStates.includes(document.readyState)) {
+      console.log('Hey!')
       this.removeOverlay();
     } else {
-      document.addEventListener('DOMContentLoaded', () => this.removeOverlay(), { once: true });
+      document.addEventListener('DOMContentLoaded', () => {
+        console.log('Hey!')
+        this.removeOverlay()
+      }, { once: true });
     }
 
     this._errorTimer = setTimeout(() => this.showError(), this.#ERROR_TIMEOUT);
@@ -66,3 +72,6 @@ class App {
     `;
   }
 }
+
+const app = new App([HeaderMenu])
+app.init()
