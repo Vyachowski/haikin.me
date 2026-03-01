@@ -31,11 +31,9 @@ class App {
 
     const readyStates = ['complete', 'interactive'];
     if (readyStates.includes(document.readyState)) {
-      console.log('Hey!')
       this.removeOverlay();
     } else {
       document.addEventListener('DOMContentLoaded', () => {
-        console.log('Hey!')
         this.removeOverlay()
       }, { once: true });
     }
