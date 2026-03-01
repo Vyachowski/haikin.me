@@ -1,51 +1,68 @@
-import HeaderMenu from './header-menu.mjs';
-import Loader from './loader.mjs';
-
 class App {
-  constructor(loader, snippets) {
-    this.loader = loader;
-    this.snippets = [];
+  #FADE_DURATION = 300;
+  #ERROR_TIMEOUT = 5000;
 
-    snippets.forEach((Snippet) => { this.snippets.push(new Snippet()) });
+  constructor(snippets) {
+    this.snippets = snippets.map((Snippet) => new Snippet());
+    this.overlay = null;
+    this.overlayStart = null;
+    this.minOverlayTime = 1000;
+    this._errorTimer = null;
   }
 
   init() {
-    this.initLoader();
     this.initSnippets();
-  }
-
-  initLoader() {
-    const isBrowserCompatible = this.checkBrowserCompatibilityForLoader()
-
-    if (isBrowserCompatible) {
-      this.loader.show();
-      this.loader.autoHide();
-    }
+    this.handleOverlay();
   }
 
   initSnippets() {
-    this.snippets.forEach((snippet) => { snippet.init() });
+    this.snippets.forEach((snippet) => snippet.init());
   }
 
-  checkBrowserCompatibilityForLoader() {
-    const isColdStart = !(localStorage.getItem('visited') === 'true');
-    const isLikelyHuman = this.isLikelyHuman();
+  handleOverlay() {
+    if (!window.__overlayActive) return;
 
-    return isColdStart && isLikelyHuman;
+    this.overlay = document.getElementById('app-overlay');
+    if (!this.overlay) return;
+
+    this.overlayStart = performance.now();
+
+    const readyStates = ['complete', 'interactive'];
+    if (readyStates.includes(document.readyState)) {
+      this.removeOverlay();
+    } else {
+      document.addEventListener('DOMContentLoaded', () => this.removeOverlay(), { once: true });
+    }
+
+    this._errorTimer = setTimeout(() => this.showError(), this.#ERROR_TIMEOUT);
   }
 
-  isLikelyHuman() {
-    let score = 0
+  removeOverlay() {
+    if (!this.overlay) return;
 
-    if (navigator.webdriver) score++                                          // 1. Автоматизация
-    if (/bot|crawl|spider|slurp|headless/i.test(navigator.userAgent)) score++ // 2. Headless / crawler user agents
-    if (!document.hasFocus()) score++                                         // 3. Страница не в фокусе
-    if (document.visibilityState !== 'visible') score++                       // 4. Не видима
-    if (!window.requestAnimationFrame) score++                                // 5. Нет rAF (очень подозрительно)
+    clearTimeout(this._errorTimer);
 
-    return score < 2
+    const elapsed = performance.now() - this.overlayStart;
+    const delay = Math.max(0, this.minOverlayTime - elapsed);
+
+    setTimeout(() => {
+      this.overlay.style.opacity = '0';
+      setTimeout(() => {
+        this.overlay.remove();
+        this.overlay = null;
+        localStorage.setItem('visited', '1');
+      }, this.#FADE_DURATION);
+    }, delay);
+  }
+
+  showError() {
+    if (!this.overlay) return;
+
+    this.overlay.innerHTML = `
+      <div style="text-align:center;font-family:system-ui">
+        <p>Something went wrong</p>
+        <button onclick="location.reload()">Reload</button>
+      </div>
+    `;
   }
 }
-const app = new App(new Loader(), [HeaderMenu]);
-
-app.init();
