@@ -71,8 +71,8 @@
   :root {
     /* Fonts */
     --font-fallback:
-      BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-      "Fira Sans", "Droid Sans", "Helvetica Neue", sans-sans;
+      BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+      "Droid Sans", "Helvetica Neue", sans-sans;
     --font-text: "Roboto Mono";
     --font-accent: "Inter";
 
@@ -285,8 +285,7 @@
   }
 
   .btn--primary:active {
-    background:
-      linear-gradient(0deg, rgb(0 0 0 / 0.2), rgb(0 0 0 / 0.2)), #2673e8;
+    background: linear-gradient(0deg, rgb(0 0 0 / 0.2), rgb(0 0 0 / 0.2)), #2673e8;
     box-shadow: 4px 4px 10px rgb(5 93 235 / 0.3);
     transition:
       background-color 200ms ease,

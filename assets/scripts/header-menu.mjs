@@ -49,7 +49,7 @@ class HeaderMenu {
 
     window.addEventListener('resize', this.handleResize);
 
-    this.links.forEach(link => {
+    this.links.forEach((link) => {
       link.addEventListener('click', () => {
         document.body.classList.remove('header-menu-open');
       });
