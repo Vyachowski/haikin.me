@@ -1,4 +1,4 @@
-import HeaderMenu from './header-menu.mjs'
+import HeaderMenu from './header-menu.mjs';
 
 class App {
   #FADE_DURATION = 300;
@@ -18,12 +18,12 @@ class App {
   }
 
   initSnippets() {
-    this.snippets.forEach((snippet) => snippet.init());
+    this.snippets.forEach((snippet) => {
+      snippet.init();
+    });
   }
 
   handleOverlay() {
-    if (!window.__overlayActive) return;
-
     this.overlay = document.getElementById('app-overlay');
     if (!this.overlay) return;
 
@@ -33,9 +33,13 @@ class App {
     if (readyStates.includes(document.readyState)) {
       this.removeOverlay();
     } else {
-      document.addEventListener('DOMContentLoaded', () => {
-        this.removeOverlay()
-      }, { once: true });
+      document.addEventListener(
+        'DOMContentLoaded',
+        () => {
+          this.removeOverlay();
+        },
+        { once: true },
+      );
     }
 
     this._errorTimer = setTimeout(() => this.showError(), this.#ERROR_TIMEOUT);
@@ -54,7 +58,6 @@ class App {
       setTimeout(() => {
         this.overlay.remove();
         this.overlay = null;
-        localStorage.setItem('visited', '1');
       }, this.#FADE_DURATION);
     }, delay);
   }
@@ -71,5 +74,5 @@ class App {
   }
 }
 
-const app = new App([HeaderMenu])
-app.init()
+const app = new App([HeaderMenu]);
+app.init();
