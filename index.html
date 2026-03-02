@@ -80,7 +80,7 @@
         return score < 2
       }
 
-      (() => {
+      function preInit() {
         const isColdStart = !localStorage.getItem('visited');
         const isLikelyRobot = !checkLikelyHuman();
 
@@ -88,7 +88,9 @@
 
         localStorage.setItem('visited', '1');
         createOverlay();
-      })();
+      };
+
+      preInit()
     </script>
     <link href="/assets/styles/home.css" rel="stylesheet">
 
